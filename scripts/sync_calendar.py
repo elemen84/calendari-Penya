@@ -15,7 +15,6 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from src.calendar.google_calendar import GoogleCalendarClient
 from src.http_client import OfficialHttpClient
 from src.providers.acb import ACB_PUBLIC_API_KEY, ACBProvider, ProviderError
 from src.providers.bcl import BCL_PUBLIC_SUBSCRIPTION_KEY, BCLProvider, BCLProviderError
@@ -29,8 +28,12 @@ ICS_PATH = ROOT / "public/penya.ics"
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Synchronize Penya games to Google Calendar")
-    parser.add_argument("--dry-run", action="store_true", help="Read sources and plan changes only")
+    parser = argparse.ArgumentParser(description="Generate the public Penya ICS feed")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Read sources and generate ICS without persisting sync state or snapshots",
+    )
     parser.add_argument("--force", action="store_true", help="Ignore the 48-hour sync gate")
     return parser.parse_args()
 
@@ -71,22 +74,7 @@ def save_state(state: dict[str, object]) -> None:
     STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def configured_google_client(*, dry_run: bool) -> GoogleCalendarClient | None:
-    credentials = os.environ.get("GOOGLE_SERVICE_ACCOUNT_JSON")
-    calendar_id = os.environ.get("GOOGLE_CALENDAR_ID")
-    if not credentials or not calendar_id:
-        if dry_run:
-            LOGGER.info(
-                "Google credentials not configured; dry-run will report source results only"
-            )
-            return None
-        raise RuntimeError(
-            "Set GOOGLE_SERVICE_ACCOUNT_JSON and GOOGLE_CALENDAR_ID before a real sync"
-        )
-    return GoogleCalendarClient.from_service_account_json(credentials, calendar_id)
-
-
-def print_report(stats, *, dry_run: bool, google_configured: bool) -> None:
+def print_report(stats, *, dry_run: bool) -> None:
     print("\nPENYA CALENDAR SYNC\n")
     print("ACB")
     print(f"Games found: {stats.acb_games}")
@@ -99,16 +87,7 @@ def print_report(stats, *, dry_run: bool, google_configured: bool) -> None:
     print(f"Current round: {stats.current_round if stats.current_round is not None else 'N/A'}")
     frozen = ", ".join(str(item) for item in stats.snapshots_frozen) or "none"
     print(f"Snapshot rounds frozen: {frozen}\n")
-    print("Google Calendar:")
-    if google_configured:
-        for action in ("CREATE", "UPDATE", "UNCHANGED", "SKIPPED"):
-            print(f"{action}: {stats.actions.get(action, 0)}")
-        print("DELETE: 0")
-    else:
-        print("CREATE: N/A (Google credentials not configured)")
-        print("UPDATE: N/A (Google credentials not configured)")
-        print("UNCHANGED: N/A (Google credentials not configured)")
-        print("DELETE: 0")
+    print(f"ICS generated: {ICS_PATH.relative_to(ROOT)}")
     print(f"\nMode: {'DRY-RUN' if dry_run else 'SYNC'}")
     print("Result: PASS")
 
@@ -123,7 +102,6 @@ def main() -> int:
         if not allowed:
             print(f"PENYA CALENDAR SYNC\n\nNo sync needed; next eligible sync is after {next_at}.")
             return 0
-        google_client = configured_google_client(dry_run=args.dry_run)
         http = OfficialHttpClient()
         season_value = os.environ.get("PENYA_SEASON_START_YEAR")
         season_start_year = int(season_value) if season_value else None
@@ -150,9 +128,7 @@ def main() -> int:
         )
         stats = execute_sync(
             prepared,
-            google_calendar=google_client,
             ics_path=ICS_PATH,
-            dry_run=args.dry_run,
         )
         if not args.dry_run:
             state["last_successful_sync"] = now.isoformat()
@@ -160,7 +136,6 @@ def main() -> int:
         print_report(
             stats,
             dry_run=args.dry_run,
-            google_configured=google_client is not None,
         )
         return 0
     except (ProviderError, BCLProviderError, SnapshotError, RuntimeError, ValueError) as exc:

@@ -2,11 +2,13 @@ from dataclasses import replace
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from src.calendar.formatting import title_for_game
-from src.calendar.google_calendar import GoogleCalendarClient, build_event_payload
+import pytest
+
+from src.calendar.formatting import description_for_game, title_for_game
 from src.calendar.ics import render_ics
 from src.models import Game
 from src.normalize import source_key
+from src.standings.snapshots import StandingRow, StandingsSnapshot
 
 MADRID = ZoneInfo("Europe/Madrid")
 
@@ -28,87 +30,11 @@ def make_game(hour: int = 20, status: str = "scheduled") -> Game:
     )
 
 
-class Request:
-    def __init__(self, value):
-        self.value = value
-
-    def execute(self):
-        return self.value
-
-
-class FakeEvents:
-    def __init__(self):
-        self.items = []
-        self.inserted = 0
-        self.updated = 0
-
-    def list(self, **kwargs):
-        wanted = kwargs["privateExtendedProperty"].split("=", 1)[1]
-        matching = [
-            item
-            for item in self.items
-            if item.get("extendedProperties", {}).get("private", {}).get("penya_source_key")
-            == wanted
-        ]
-        return Request({"items": matching})
-
-    def insert(self, *, calendarId, body):
-        self.items.append(dict(body))
-        self.inserted += 1
-        return Request(body)
-
-    def update(self, *, calendarId, eventId, body):
-        for item in self.items:
-            if item["id"] == eventId:
-                item.update(body)
-                break
-        else:
-            raise AssertionError("update target not found")
-        self.updated += 1
-        return Request(body)
-
-
-class FakeService:
-    def __init__(self):
-        self.resource = FakeEvents()
-
-    def events(self):
-        return self.resource
-
-
-def test_google_calendar_create_update_and_no_duplicate() -> None:
-    service = FakeService()
-    client = GoogleCalendarClient(service, "calendar@example")
-    game = make_game()
-
-    assert client.upsert_game(game, "first") == "CREATE"
-    moved = make_game(hour=21)
-    assert client.upsert_game(moved, "moved") == "UPDATE"
-    moved_date = replace(moved, start_datetime=datetime(2026, 12, 15, 21, tzinfo=MADRID))
-    assert client.upsert_game(moved_date, "moved date") == "UPDATE"
-    assert client.upsert_game(moved_date, "moved date") == "UNCHANGED"
-    assert service.resource.inserted == 1
-    assert service.resource.updated == 2
-    assert len(service.resource.items) == 1
-
-
 def test_postponed_game_is_marked_and_keeps_identity() -> None:
     game = make_game(status="postponed")
-    assert "APLazADO" not in title_for_game(game)
-    assert "APLAZADO" in title_for_game(game)
+    assert "AJORNAT" in title_for_game(game)
+    assert "APLAZADO" not in title_for_game(game)
     assert source_key(game) == source_key(make_game(hour=22))
-
-
-def test_postponed_without_new_date_preserves_existing_slot() -> None:
-    original = make_game()
-    existing = build_event_payload(original, "old description")
-    postponed = replace(original, start_datetime=None, start_date=None, status="postponed")
-    updated = build_event_payload(postponed, "postponed description", existing=existing)
-
-    assert updated is not None
-    assert updated["start"] == existing["start"]
-    assert updated["end"] == existing["end"]
-    assert "APLAZADO" in updated["summary"]
 
 
 def test_ics_uid_is_stable_when_time_changes() -> None:
@@ -119,3 +45,82 @@ def test_ics_uid_is_stable_when_time_changes() -> None:
     uid_line = next(line for line in first_ics.splitlines() if line.startswith("UID:"))
     assert uid_line == next(line for line in second_ics.splitlines() if line.startswith("UID:"))
     assert "DTSTART;TZID=Europe/Madrid:20261214T210000" in second_ics
+
+
+def test_ics_does_not_duplicate_a_source_game() -> None:
+    game = make_game()
+    duplicate = replace(game, start_datetime=datetime(2026, 12, 15, 20, tzinfo=MADRID))
+    feed = render_ics(
+        [game, duplicate],
+        {source_key(game): "description"},
+    )
+
+    assert feed.count(f"UID:{source_key(game)}@penya-calendar") == 1
+
+
+def test_acb_event_content_uses_catalan_labels_and_keeps_official_values() -> None:
+    game = make_game()
+    standings = StandingsSnapshot(
+        season="2026-27",
+        round_number=12,
+        captured_at=datetime(2026, 12, 14, 6, 15, tzinfo=MADRID),
+        source_url="https://api2.acb.com/api/seasondata/Competition/standings",
+        rows=(
+            StandingRow(1, "Real Madrid", 11, 10, 1),
+            StandingRow(2, "Valencia Basket", 11, 9, 2),
+        ),
+    )
+
+    content = "\n".join(
+        (title_for_game(game), description_for_game(game, standings))
+    )
+
+    assert "🏆 Liga Endesa" in content
+    assert "Real Madrid — 10-1" in content
+    assert "Valencia Basket — 9-2" in content
+    assert "📍 Palau Olímpic de Badalona" in content
+    assert "📊 CLASSIFICACIÓ" in content
+    assert "Classificació encara no disponible" not in content
+    assert "Font: ACB" in content
+    assert "Actualitzat: 14/12/2026 06:15" in content
+    assert "Font oficial: https://www.acb.com/es/liga/calendario" in content
+
+    for forbidden in (
+        "CLASIFICACIÓN",
+        "Clasificación",
+        "Fuente",
+        "Actualizado",
+        "APLAZADO",
+        "CANCELADO",
+        "FINALIZADO",
+        "pendiente",
+        "Classification",
+        "Source",
+        "Updated",
+        "Pending",
+    ):
+        assert forbidden not in content
+
+
+def test_acb_event_uses_catalan_unavailable_standings_message() -> None:
+    description = description_for_game(make_game())
+
+    assert "Classificació encara no disponible" in description
+    assert "Clasificación todavía no disponible" not in description
+
+
+@pytest.mark.parametrize(
+    ("status", "catalan_label", "spanish_label"),
+    [
+        ("postponed", "AJORNAT", "APLAZADO"),
+        ("cancelled", "CANCEL·LAT", "CANCELADO"),
+        ("finished", "FINALITZAT", "FINALIZADO"),
+    ],
+)
+def test_event_statuses_are_displayed_in_catalan(
+    status: str, catalan_label: str, spanish_label: str
+) -> None:
+    title = title_for_game(make_game(status=status))
+
+    assert catalan_label in title
+    assert spanish_label not in title

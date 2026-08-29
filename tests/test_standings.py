@@ -101,7 +101,7 @@ def test_future_game_uses_current_standings(tmp_path: Path) -> None:
 
     acb_key = next(key for key in prepared.descriptions if "liga-endesa" in key)
     acb_description = prepared.descriptions[acb_key]
-    assert "Current Team 1-0" in acb_description
+    assert "Current Team — 1-0" in acb_description
 
 
 def test_completed_round_snapshot_is_saved_and_then_frozen(tmp_path: Path) -> None:
@@ -116,7 +116,7 @@ def test_completed_round_snapshot_is_saved_and_then_frozen(tmp_path: Path) -> No
         now=datetime(2026, 12, 12, tzinfo=MADRID),
     )
     assert 7 in first.stats.snapshots_frozen
-    assert "Historical Team 1-0" in next(
+    assert "Historical Team — 1-0" in next(
         value for key, value in first.descriptions.items() if "liga-endesa" in key
     )
 
@@ -131,6 +131,6 @@ def test_completed_round_snapshot_is_saved_and_then_frozen(tmp_path: Path) -> No
     acb_description = next(
         value for key, value in second.descriptions.items() if "liga-endesa" in key
     )
-    assert "Historical Team 1-0" in acb_description
+    assert "Historical Team — 1-0" in acb_description
     assert "Later Current Team" not in acb_description
     assert "Should Not Replace" not in acb_description

@@ -1,13 +1,13 @@
 # Penya Calendar Sync
 
-Sistema pequeño y mantenible que obtiene los partidos oficiales del primer equipo masculino del Joventut de Badalona y los sincroniza con Google Calendar y un calendario ICS.
+Sistema pequeño y mantenible que obtiene los partidos oficiales del primer equipo masculino del Joventut de Badalona y genera un feed ICS público.
 
 Incluye únicamente:
 
 - Liga Endesa / ACB.
 - Basketball Champions League / BCL.
 
-No usa servidor permanente, Railway, base de datos ni frontend. GitHub Actions ejecuta el script una vez al día; el script solo sincroniza si han transcurrido al menos 48 horas desde la última sincronización correcta.
+No usa servidor permanente, Railway, base de datos ni frontend. GitHub Actions ejecuta el script una vez al día; el script solo genera una nueva versión si han transcurrido al menos 48 horas desde la última sincronización correcta.
 
 ## Fuentes oficiales
 
@@ -34,9 +34,13 @@ La URL histórica indicada por el proyecto redirige a la web oficial actual: [Ch
 
 El adapter filtra competición BCL masculina senior y el primer equipo de la Penya. Usa los IDs de partido, fase, grupo, fecha/hora, estado y `venueName` entregados por la fuente. Las descripciones BCL nunca contienen clasificación.
 
-Las claves públicas que requieren los frontends oficiales se mantienen como defaults en los adapters; no son credenciales de Google. Se pueden sustituir con `ACB_API_KEY` y `BCL_APIM_SUBSCRIPTION_KEY` si las webs cambian sus claves.
+Las claves públicas que requieren los frontends oficiales se mantienen como defaults en los adapters. Se pueden sustituir con `ACB_API_KEY` y `BCL_APIM_SUBSCRIPTION_KEY` si las webs cambian sus claves.
 
 ## Arquitectura
+
+```text
+ACB + BCL -> GitHub Action -> public/penya.ics -> GitHub Pages -> suscripciones
+```
 
 ```text
 scripts/sync_calendar.py
@@ -44,16 +48,15 @@ scripts/sync_calendar.py
         +-- providers/acb.py  -> ACBData + Game
         +-- providers/bcl.py  -> BCLData + Game
         +-- standings/snapshots.py
-        +-- calendar/google_calendar.py
         +-- calendar/ics.py -> public/penya.ics
         +-- data/sync-state.json
 ```
 
 `Game` contiene competición, temporada, jornada, fase, equipos, fecha/hora, zona horaria `Europe/Madrid`, recinto, estado, URL e ID de fuente. Los aliases de Joventut/Penya se normalizan antes de filtrar.
 
-La identidad es determinista: `competition + season + source_game_id`, con fallback a jornada y equipos normalizados. Se guarda en `extendedProperties.private.penya_source_key`; cambiar hora, fecha, rival o pabellón actualiza el mismo evento.
+La identidad es determinista: `competition + season + source_game_id`, con fallback a jornada y equipos normalizados. El UID del feed usa `<source-key>@penya-calendar`; cambiar hora, fecha, rival o pabellón no duplica el partido.
 
-No se borran eventos automáticamente. Una respuesta vacía o incompleta de una fuente hace fallar la ejecución de forma segura antes de tocar Google Calendar. Un aplazamiento conserva el evento existente y lo marca como `⚠️ APLAZADO`; una cancelación se marca como `❌ CANCELADO`.
+No se eliminan partidos del feed por una respuesta vacía o incompleta: la ejecución falla de forma segura antes de sobrescribir archivos generados. Los cambios de estado se reflejan en el título del evento.
 
 ## Clasificación ACB y snapshots congelados
 
@@ -80,60 +83,36 @@ python -m pip install -e ".[dev]"
 
 Se puede usar `.venv` en un checkout cuyo path no contenga `:`. En macOS, Python puede rechazar un entorno virtual dentro de este proyecto porque el nombre de la carpeta contiene ese separador; por eso el ejemplo usa `/tmp`.
 
-El script obtiene los datos reales al ejecutarse. Para consultar fuentes y generar `public/penya.ics` sin modificar Google Calendar:
+El script obtiene los datos reales al ejecutarse. Para consultar las fuentes y generar `public/penya.ics`:
 
 ```bash
 python scripts/sync_calendar.py --dry-run --force
 ```
 
-`--force` ignora el límite de 48 horas. Sin `--force`, una ejecución posterior a la última correcta dentro de 48 horas termina limpiamente. En dry-run no hacen falta credenciales de Google; reportará las acciones de calendario como no disponibles.
-
-Para una sincronización real local se necesitan las dos variables siguientes:
-
-```bash
-export GOOGLE_SERVICE_ACCOUNT_JSON='{"type":"service_account",...}'
-export GOOGLE_CALENDAR_ID='...'
-python scripts/sync_calendar.py --force
-```
+`--force` ignora el límite de 48 horas. Sin `--force`, una ejecución posterior a la última correcta dentro de 48 horas termina limpiamente. `--dry-run` consulta las fuentes y genera el ICS sin guardar el estado ni snapshots.
 
 También se puede establecer `PENYA_SEASON_START_YEAR=2026` para fijar explícitamente la temporada. Si no se establece, ACB selecciona la temporada actual publicada.
 
-## Google Cloud y Google Calendar
-
-1. En [Google Cloud Console](https://console.cloud.google.com/), crea un proyecto o selecciona uno existente.
-2. En **APIs & Services → Library**, activa **Google Calendar API**.
-3. En **IAM & Admin → Service Accounts**, crea una Service Account.
-4. Abre esa cuenta, entra en **Keys → Add key → Create new key → JSON** y descarga el JSON. Guárdalo fuera del repositorio; no lo subas a Git.
-5. En Google Calendar crea un calendario nuevo, por ejemplo `Penya - Joventut`.
-6. En la configuración de ese calendario, en **Compartir con personas o grupos**, añade el email de la Service Account y dale permiso **Make changes to events**.
-7. Copia el ID del calendario desde **Integrate calendar → Calendar ID**.
-
-La Service Account no hereda tus calendarios personales: el paso 6 es obligatorio. El calendario quedará disponible para compartir después con las personas que quieras.
-
 ## GitHub Actions
 
-En el repositorio, abre **Settings → Secrets and variables → Actions** y crea estos **Repository secrets**:
-
-- `GOOGLE_SERVICE_ACCOUNT_JSON`: contenido completo del JSON descargado.
-- `GOOGLE_CALENDAR_ID`: ID del calendario.
-
-Opcionalmente, como **Repository variables**, se pueden definir `PENYA_SEASON_START_YEAR`, `ACB_API_KEY` y `BCL_APIM_SUBSCRIPTION_KEY`; normalmente no hace falta porque los adapters tienen los valores públicos usados por las webs oficiales.
+La ejecución normal no necesita secrets. Las variables `PENYA_SEASON_START_YEAR`, `ACB_API_KEY` y `BCL_APIM_SUBSCRIPTION_KEY` son opcionales; los adapters tienen valores públicos por defecto.
 
 El workflow `.github/workflows/sync-calendar.yml` ejecuta el proceso diariamente a las `04:15 UTC`. Eso corresponde a las `06:15` en horario de verano de Madrid y a las `05:15` en horario de invierno. GitHub Actions cron funciona en UTC y no sigue automáticamente el cambio de hora; la ejecución diaria y el control interno de 48 horas evitan depender de una expresión `*/2` incorrecta alrededor del cambio de mes.
 
 El workflow tiene `workflow_dispatch`; marca `force` para forzar una sincronización manual. Tras una sincronización completa, solo se hace commit si han cambiado `data/sync-state.json`, snapshots o `public/penya.ics`.
 
-Para que el workflow pueda hacer push, la configuración del repositorio debe permitir que `GITHUB_TOKEN` escriba contenido (**Settings → Actions → General → Workflow permissions → Read and write permissions**). En pull requests desde forks no se exponen estos secretos.
+Para que el workflow pueda hacer commit y publicar, la configuración del repositorio debe permitir que `GITHUB_TOKEN` escriba contenido (**Settings → Actions → General → Workflow permissions → Read and write permissions**).
 
 ## Landing pública y GitHub Pages
 
-La landing está en `public/index.html`, con sus estilos y comportamiento en `public/styles.css` y `public/app.js`. El mismo directorio contiene `penya.ics`, por lo que GitHub Pages publica la landing y el calendario desde el mismo artefacto. La interfaz pública solo ofrece suscripción: Google Calendar abre su URL `cid` y Apple/otros calendarios reciben una URL `webcal://`.
+La landing está en `public/index.html`, con sus estilos y comportamiento en `public/styles.css` y `public/app.js`. El mismo directorio contiene `penya.ics`, por lo que GitHub Pages publica la landing y el feed desde el mismo artefacto. La interfaz pública solo ofrece suscripción: Google Calendar recibe la URL HTTPS mediante su mecanismo `cid`, y Apple/otros calendarios reciben una URL `webcal://`. No se usa ninguna API de calendario.
 
-Para activarlo manualmente una sola vez:
+Puesta en producción:
 
-1. En GitHub abre **Settings → Pages**.
-2. En **Build and deployment → Source**, selecciona **GitHub Actions**.
-3. Guarda la configuración y ejecuta el workflow `Sync Penya calendar` una vez desde **Actions → Run workflow**; marca `force` si quieres regenerar inmediatamente.
+1. Tener el repositorio en GitHub.
+2. En **Settings → Pages**, seleccionar **GitHub Actions** como fuente.
+3. En **Settings → Actions → General**, habilitar permisos de escritura para el workflow.
+4. Ejecutar `Sync Penya calendar` desde **Actions → Run workflow**; marcar `force` para regenerar inmediatamente.
 
 Con usuario y repositorio reales, las URLs esperadas son:
 
@@ -148,7 +127,7 @@ La landing calcula automáticamente estas URLs a partir del dominio y la ruta do
 
 ## ICS
 
-Cada ejecución que pasa el control de 48 horas genera `public/penya.ics`, incluso en dry-run. Los UID tienen la forma `<source-key>@penya-calendar` y no cambian cuando cambia la hora del partido. Se puede publicar ese archivo desde GitHub Pages o servirlo desde cualquier hosting estático como fallback, pero la sincronización principal usa Google Calendar API.
+Cada ejecución que pasa el control de 48 horas genera `public/penya.ics`, incluso en dry-run. Los UID tienen la forma `<source-key>@penya-calendar` y no cambian cuando cambia la hora del partido. GitHub Pages sirve ese archivo como feed público para las suscripciones.
 
 ## Tests, lint y diagnóstico
 
@@ -159,7 +138,7 @@ mypy src scripts
 git diff --check
 ```
 
-Los tests mockean Google Calendar y usan fixtures locales: no necesitan credenciales reales. Para depurar un fallo, revisa el log de Actions y reproduce localmente con `--dry-run --force`. El script valida la forma de las respuestas, usa timeout y retries con backoff para HTTP y nunca interpreta cero partidos como una eliminación masiva.
+Los tests usan fixtures locales y no necesitan credenciales. Para depurar un fallo, revisa el log de Actions y reproduce localmente con `--dry-run --force`. El script valida la forma de las respuestas, usa timeout y retries con backoff para HTTP y nunca interpreta cero partidos como una eliminación masiva.
 
 ## Cambiar de temporada
 

@@ -41,8 +41,11 @@ def render_ics(games: list[Game] | tuple[Game, ...], descriptions: dict[str, str
         "X-WR-CALNAME:Penya - Joventut Badalona",
         f"X-WR-TIMEZONE:{TIMEZONE_NAME}",
     ]
+    unique_games: dict[str, Game] = {}
+    for game in games:
+        unique_games.setdefault(source_key(game), game)
     for game in sorted(
-        games,
+        unique_games.values(),
         key=lambda item: (item.start_date or datetime.max.date(), source_key(item)),
     ):
         if game.start_datetime is None and game.start_date is None:

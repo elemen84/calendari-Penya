@@ -123,8 +123,7 @@ class StandingsSnapshotStore:
 
 def format_rows(snapshot: StandingsSnapshot | None) -> str:
     if snapshot is None or not snapshot.rows:
-        return "Clasificación todavía no disponible"
+        return "Classificació encara no disponible"
     return "\n".join(
-        f"{row.position}. {row.team} {row.wins}-{row.losses}" for row in snapshot.rows
+        f"{row.position}. {row.team} — {row.wins}-{row.losses}" for row in snapshot.rows
     )
-

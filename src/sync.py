@@ -1,20 +1,16 @@
 from __future__ import annotations
 
-import logging
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 
 from src.calendar.formatting import description_for_game
-from src.calendar.google_calendar import GoogleCalendarClient
 from src.calendar.ics import write_ics
 from src.models import Game
 from src.normalize import source_key
 from src.providers.acb import ACBData, ACBProvider
 from src.providers.bcl import BCLData, BCLProvider
 from src.standings.snapshots import StandingsSnapshot, StandingsSnapshotStore
-
-LOGGER = logging.getLogger(__name__)
 
 
 @dataclass
@@ -23,9 +19,6 @@ class SyncStats:
     bcl_games: int = 0
     acb_upcoming: int = 0
     acb_finished: int = 0
-    actions: dict[str, int] = field(
-        default_factory=lambda: {"CREATE": 0, "UPDATE": 0, "UNCHANGED": 0, "SKIPPED": 0}
-    )
     snapshots_frozen: list[int] = field(default_factory=list)
     standings_available: bool = False
     current_round: int | None = None
@@ -58,7 +51,7 @@ def prepare_sync(
     now: datetime,
     dry_run: bool = False,
 ) -> PreparedSync:
-    # Fetch and validate every source before touching Google Calendar.
+    # Fetch and validate every source before writing generated files.
     acb_data = acb_provider.fetch_games()
     bcl_data = bcl_provider.fetch_games()
     current_standings = acb_provider.fetch_standings()
@@ -110,20 +103,7 @@ def prepare_sync(
 def execute_sync(
     prepared: PreparedSync,
     *,
-    google_calendar: GoogleCalendarClient | None,
     ics_path: Path,
-    dry_run: bool = False,
 ) -> SyncStats:
     write_ics(ics_path, prepared.games, prepared.descriptions)
-    stats = prepared.stats
-    if google_calendar is None:
-        return stats
-    for game in prepared.games:
-        key = source_key(game)
-        action = (
-            google_calendar.plan_game(game, prepared.descriptions[key])
-            if dry_run
-            else google_calendar.upsert_game(game, prepared.descriptions[key])
-        )
-        stats.actions[action] = stats.actions.get(action, 0) + 1
-    return stats
+    return prepared.stats

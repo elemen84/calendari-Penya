@@ -5,11 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "penya-calendar"
 version = "0.1.0"
-description = "Sincroniza los partidos masculinos de Penya con Google Calendar e ICS."
+description = "Genera y publica el calendario ICS del primer equipo masculino de Penya."
 requires-python = ">=3.12"
 dependencies = [
-    "google-api-python-client>=2.149,<3",
-    "google-auth>=2.36,<3",
     "requests>=2.32,<3",
 ]
 
@@ -38,4 +36,3 @@ disallow_any_generics = false
 ignore_missing_imports = true
 no_implicit_optional = true
 warn_unused_ignores = true
-

@@ -9,8 +9,9 @@ from src.standings.snapshots import StandingsSnapshot, format_rows
 
 def title_for_game(game: Game) -> str:
     prefix = {
-        "postponed": "⚠️ APLAZADO · ",
-        "cancelled": "❌ CANCELADO · ",
+        "postponed": "⚠️ AJORNAT · ",
+        "cancelled": "❌ CANCEL·LAT · ",
+        "finished": "✅ FINALITZAT · ",
     }.get(game.status, "")
     matchup = f"{display_team_name(game.home_team)} – {display_team_name(game.away_team)}"
     if game.competition == "Liga Endesa":
@@ -32,19 +33,19 @@ def description_for_game(
 ) -> str:
     lines: list[str] = []
     if game.competition == "Liga Endesa":
-        lines.extend(["🏆 Liga Endesa", f"Jornada {game.round or 'pendiente'}", ""])
+        lines.extend(["🏆 Liga Endesa", f"Jornada {game.round or 'pendent'}", ""])
         if game.venue:
             lines.extend([f"📍 {game.venue}", ""])
-        lines.extend(["📊 CLASIFICACIÓN", format_rows(standings), ""])
-        lines.append("Fuente: ACB")
+        lines.extend(["📊 CLASSIFICACIÓ", format_rows(standings), ""])
+        lines.append("Font: ACB")
         timestamp: datetime | None
         if standings is not None:
             timestamp = standings.captured_at
         else:
             timestamp = updated_at
         if timestamp is not None:
-            lines.append(f"Actualizado: {timestamp.strftime('%d/%m/%Y %H:%M')}")
-        lines.append(f"Fuente oficial: {game.source_url}")
+            lines.append(f"Actualitzat: {timestamp.strftime('%d/%m/%Y %H:%M')}")
+        lines.append(f"Font oficial: {game.source_url}")
         return "\n".join(lines)
 
     lines.extend(["🏆 Basketball Champions League"])
@@ -53,10 +54,10 @@ def description_for_game(
     if game.round is not None:
         lines.append(f"Jornada: {game.round}")
     if game.group:
-        lines.append(f"Grupo: {game.group}")
+        lines.append(f"Grup: {game.group}")
     if game.venue:
         lines.extend(["", f"📍 {game.venue}"])
-    lines.extend(["", f"Fuente oficial: {game.source_url}"])
+    lines.extend(["", f"Font oficial: {game.source_url}"])
     return "\n".join(lines)
 
 

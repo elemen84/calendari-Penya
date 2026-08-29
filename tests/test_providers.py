@@ -116,5 +116,11 @@ def test_bcl_provider_fails_closed_on_zero_matches() -> None:
 def test_bcl_description_never_contains_standings() -> None:
     game = BCLProvider(FakeHTTP(bcl=[bcl_game()]), competition_id=209123).fetch_games().games[0]
     description = description_for_game(game)
-    assert "CLASIFICACIÓN" not in description
-    assert "clasificación" not in description.casefold()
+    assert "🏆 Basketball Champions League" in description
+    assert "Fase: Regular Season" in description
+    assert "Jornada: 1" in description
+    assert "Grup: H" in description
+    assert "📍 Palau Olímpic de Badalona" in description
+    assert "CLASSIFICACIÓ" not in description
+    assert "classificació" not in description.casefold()
+    assert "Font oficial: https://www.championsleague.basketball/en/games" in description

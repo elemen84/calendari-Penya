@@ -1,5 +1,8 @@
 from copy import deepcopy
+from pathlib import Path
 
+from src.calendar.formatting import description_for_game
+from src.calendar.ics import write_ics
 from src.normalize import source_key
 from src.providers.acb import ACBProvider
 from src.providers.bcl import BCLProvider
@@ -50,3 +53,23 @@ def test_new_phase_can_grow_total_without_expected_count_rules() -> None:
 
     assert len(data.games) == 2
     assert len({source_key(game) for game in data.games}) == 2
+
+
+def test_new_bcl_phase_is_published_with_a_deterministic_uid(tmp_path: Path) -> None:
+    regular = bcl_game(2001)
+    new_phase = deepcopy(regular)
+    new_phase["gameId"] = 2002
+    new_phase["round"] = {"roundNumber": 2, "roundName": "Quarter-Finals"}
+    data = BCLProvider(FakeHTTP(bcl=[regular, new_phase]), competition_id=209123).fetch_games()
+    descriptions = {
+        source_key(game): description_for_game(game)
+        for game in data.games
+    }
+
+    feed_path = tmp_path / "penya.ics"
+    write_ics(feed_path, data.games, descriptions)
+    feed = feed_path.read_text(encoding="utf-8")
+
+    assert "Quarter-Finals" in feed
+    assert feed.count("UID:bcl:") == 2
+    assert len({line for line in feed.splitlines() if line.startswith("UID:")}) == 2
