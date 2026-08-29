@@ -2,41 +2,19 @@
   const subscribeButton = document.getElementById("subscribe-button");
   const modal = document.getElementById("subscribe-modal");
   const closeButton = document.getElementById("close-modal");
-  const googleLink = document.getElementById("google-link");
+  const googleOption = document.getElementById("google-option");
   const appleLink = document.getElementById("apple-link");
   const otherLink = document.getElementById("other-link");
-  const shield = document.getElementById("penya-shield");
-  const shieldFallback = document.getElementById("penya-shield-fallback");
+  const subscribeOptions = document.querySelector(".subscribe-options");
+  const modalPlaceholder = document.getElementById("modal-placeholder");
+  const googleGuide = document.getElementById("google-guide");
+  const modalTitle = document.getElementById("modal-title");
+  const backToOptions = document.getElementById("back-to-options");
+  const feedUrl = document.getElementById("feed-url");
+  const copyFeedUrlButton = document.getElementById("copy-feed-url");
+  const copyFeedback = document.getElementById("copy-feedback");
   let lastFocusedElement = null;
-
-  function setupShield() {
-    if (!shield || !shieldFallback) {
-      return;
-    }
-
-    const shieldFrame = shield.parentElement;
-    const showFallback = () => {
-      shield.hidden = true;
-      shieldFallback.hidden = false;
-      shieldFrame?.classList.remove("has-image");
-    };
-    const showShield = () => {
-      shield.hidden = false;
-      shieldFallback.hidden = true;
-      shieldFrame?.classList.add("has-image");
-    };
-
-    shield.addEventListener("load", showShield);
-    shield.addEventListener("error", showFallback);
-
-    if (shield.complete) {
-      if (shield.naturalWidth > 0) {
-        showShield();
-      } else {
-        showFallback();
-      }
-    }
-  }
+  let feedbackTimeoutId = null;
 
   function publicCalendarUrl() {
     const calendarUrl = new URL("penya.ics", window.location.href);
@@ -49,15 +27,80 @@
   function updateSubscriptionLinks() {
     const httpsUrl = publicCalendarUrl();
     const webcalUrl = httpsUrl.replace(/^https:/, "webcal:");
-    const googleUrl = `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(httpsUrl)}`;
-    googleLink.href = googleUrl;
+    feedUrl.textContent = httpsUrl;
     appleLink.href = webcalUrl;
     otherLink.href = webcalUrl;
+  }
+
+  function showOptions() {
+    subscribeOptions.hidden = false;
+    modalPlaceholder.hidden = false;
+    googleGuide.hidden = true;
+    googleOption.setAttribute("aria-expanded", "false");
+    googleOption.setAttribute("aria-pressed", "false");
+    googleOption.classList.remove("is-active");
+    modalTitle.textContent = "Tria el teu calendari";
+  }
+
+  function showGoogleGuide() {
+    subscribeOptions.hidden = false;
+    modalPlaceholder.hidden = true;
+    googleGuide.hidden = false;
+    googleOption.setAttribute("aria-expanded", "true");
+    googleOption.setAttribute("aria-pressed", "true");
+    googleOption.classList.add("is-active");
+    modalTitle.textContent = "Google Calendar";
+    backToOptions.focus();
+  }
+
+  function returnToOptions() {
+    showOptions();
+    googleOption.focus();
+  }
+
+  async function copyFeedUrl() {
+    const url = feedUrl.textContent;
+    let copied = false;
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(url);
+        copied = true;
+      }
+    } catch {
+      copied = false;
+    }
+
+    if (!copied) {
+      const textArea = document.createElement("textarea");
+      textArea.value = url;
+      textArea.setAttribute("readonly", "");
+      textArea.style.position = "fixed";
+      textArea.style.opacity = "0";
+      document.body.append(textArea);
+      textArea.select();
+      try {
+        copied = document.execCommand("copy");
+      } catch {
+        copied = false;
+      }
+      textArea.remove();
+    }
+
+    copyFeedback.textContent = copied
+      ? "Enllaç copiat"
+      : "No s'ha pogut copiar l'enllaç.";
+    copyFeedback.hidden = false;
+    window.clearTimeout(feedbackTimeoutId);
+    feedbackTimeoutId = window.setTimeout(() => {
+      copyFeedback.hidden = true;
+    }, 2400);
   }
 
   function openModal() {
     lastFocusedElement = document.activeElement;
     updateSubscriptionLinks();
+    showOptions();
     modal.hidden = false;
     document.body.classList.add("modal-open");
     closeButton.focus();
@@ -65,15 +108,19 @@
 
   function closeModal() {
     modal.hidden = true;
+    window.clearTimeout(feedbackTimeoutId);
+    copyFeedback.hidden = true;
     document.body.classList.remove("modal-open");
     if (lastFocusedElement) {
       lastFocusedElement.focus();
     }
   }
 
-  setupShield();
   subscribeButton.addEventListener("click", openModal);
   closeButton.addEventListener("click", closeModal);
+  googleOption.addEventListener("click", showGoogleGuide);
+  backToOptions.addEventListener("click", returnToOptions);
+  copyFeedUrlButton.addEventListener("click", copyFeedUrl);
   modal.addEventListener("click", (event) => {
     if (event.target.hasAttribute("data-close-modal")) {
       closeModal();

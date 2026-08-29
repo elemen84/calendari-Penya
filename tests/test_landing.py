@@ -1,5 +1,4 @@
 from pathlib import Path
-from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
@@ -28,16 +27,25 @@ def test_landing_builds_webcal_url() -> None:
     assert 'httpsUrl.replace(/^https:/, "webcal:")' in app
 
 
-def test_google_calendar_url_encodes_the_https_calendar_url() -> None:
-    public_url = "https://example.github.io/penya-calendar/penya.ics"
-    expected = f"https://calendar.google.com/calendar/r?cid={quote(public_url, safe='')}"
+def test_google_calendar_shows_manual_subscription_guide() -> None:
+    html = (PUBLIC / "index.html").read_text(encoding="utf-8")
     app = (PUBLIC / "app.js").read_text(encoding="utf-8")
+    styles = (PUBLIC / "styles.css").read_text(encoding="utf-8")
 
-    assert expected == (
-        "https://calendar.google.com/calendar/r?cid="
-        "https%3A%2F%2Fexample.github.io%2Fpenya-calendar%2Fpenya.ics"
-    )
-    assert "encodeURIComponent(httpsUrl)" in app
+    assert 'id="google-option"' in html
+    assert 'id="google-guide"' in html
+    assert "Calendari de la Penya 2026/2027" in html
+    assert html.count("Partits i horaris de la Penya.") == 2
+    assert "Partits i classificació" not in html
+    assert "La freqüència final" not in html
+    assert "white-space: nowrap" in styles
+    assert "Des d'un ordinador, obre Google Calendar." in html
+    assert "Altres calendaris → + → Des d'URL." in html
+    assert 'id="copy-feed-url"' in html
+    assert "Mostra'n més" in html
+    assert "Sincronitza" in html
+    assert "calendar.google.com/calendar/r?cid=" not in app
+    assert "navigator.clipboard.writeText(url)" in app
 
 
 def test_landing_has_no_download_action_or_language() -> None:
@@ -70,7 +78,7 @@ def test_landing_remains_in_catalan() -> None:
     assert "Basketball Champions League" in html
 
 
-def test_landing_uses_penya_identity_with_optional_shield_fallback() -> None:
+def test_landing_uses_penya_identity_without_a_visual_shield_fallback() -> None:
     html = (PUBLIC / "index.html").read_text(encoding="utf-8")
     styles = (PUBLIC / "styles.css").read_text(encoding="utf-8")
     app = (PUBLIC / "app.js").read_text(encoding="utf-8")
@@ -81,7 +89,13 @@ def test_landing_uses_penya_identity_with_optional_shield_fallback() -> None:
     assert "--green: #0a6a43" in styles
     assert "--green-dark: #074d31" in styles
     assert "--accent: #d8842a" in styles
-    assert 'shield.addEventListener("error", showFallback)' in app
+    assert 'id="penya-shield-fallback"' not in html
+    assert "showFallback" not in app
+    assert ".hero-shield-fallback" not in styles
+    assert ".hero::before" not in styles
+    assert "overflow: visible" in styles
+    assert "height: auto" in styles
+    assert "object-fit: contain" in styles
     assert '#0a6a43' in favicon
     assert '#111111' in favicon
 
