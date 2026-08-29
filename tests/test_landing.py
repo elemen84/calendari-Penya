@@ -70,6 +70,22 @@ def test_landing_remains_in_catalan() -> None:
     assert "Basketball Champions League" in html
 
 
+def test_landing_uses_penya_identity_with_optional_shield_fallback() -> None:
+    html = (PUBLIC / "index.html").read_text(encoding="utf-8")
+    styles = (PUBLIC / "styles.css").read_text(encoding="utf-8")
+    app = (PUBLIC / "app.js").read_text(encoding="utf-8")
+    favicon = (PUBLIC / "favicon.svg").read_text(encoding="utf-8")
+
+    assert 'src="./assets/penya-shield.png"' in html
+    assert 'Calendari no oficial de la Penya' in html
+    assert "--green: #0a6a43" in styles
+    assert "--green-dark: #074d31" in styles
+    assert "--accent: #d8842a" in styles
+    assert 'shield.addEventListener("error", showFallback)' in app
+    assert '#0a6a43' in favicon
+    assert '#111111' in favicon
+
+
 def test_workflow_keeps_daily_run_and_publishes_public_directory() -> None:
     workflow = (ROOT / ".github/workflows/sync-calendar.yml").read_text(encoding="utf-8")
     script = (ROOT / "scripts/sync_calendar.py").read_text(encoding="utf-8")

@@ -5,7 +5,38 @@
   const googleLink = document.getElementById("google-link");
   const appleLink = document.getElementById("apple-link");
   const otherLink = document.getElementById("other-link");
+  const shield = document.getElementById("penya-shield");
+  const shieldFallback = document.getElementById("penya-shield-fallback");
   let lastFocusedElement = null;
+
+  function setupShield() {
+    if (!shield || !shieldFallback) {
+      return;
+    }
+
+    const shieldFrame = shield.parentElement;
+    const showFallback = () => {
+      shield.hidden = true;
+      shieldFallback.hidden = false;
+      shieldFrame?.classList.remove("has-image");
+    };
+    const showShield = () => {
+      shield.hidden = false;
+      shieldFallback.hidden = true;
+      shieldFrame?.classList.add("has-image");
+    };
+
+    shield.addEventListener("load", showShield);
+    shield.addEventListener("error", showFallback);
+
+    if (shield.complete) {
+      if (shield.naturalWidth > 0) {
+        showShield();
+      } else {
+        showFallback();
+      }
+    }
+  }
 
   function publicCalendarUrl() {
     const calendarUrl = new URL("penya.ics", window.location.href);
@@ -40,6 +71,7 @@
     }
   }
 
+  setupShield();
   subscribeButton.addEventListener("click", openModal);
   closeButton.addEventListener("click", closeModal);
   modal.addEventListener("click", (event) => {

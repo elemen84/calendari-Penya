@@ -107,6 +107,8 @@ Para que el workflow pueda hacer commit y publicar, la configuración del reposi
 
 La landing está en `public/index.html`, con sus estilos y comportamiento en `public/styles.css` y `public/app.js`. El mismo directorio contiene `penya.ics`, por lo que GitHub Pages publica la landing y el feed desde el mismo artefacto. La interfaz pública solo ofrece suscripción: Google Calendar recibe la URL HTTPS mediante su mecanismo `cid`, y Apple/otros calendarios reciben una URL `webcal://`. No se usa ninguna API de calendario.
 
+El escut de la landing es opcional: si se añade `public/assets/penya-shield.png`, se muestra automáticamente; si no está presente, la interfaz utiliza un fallback discreto.
+
 Puesta en producción:
 
 1. Tener el repositorio en GitHub.
