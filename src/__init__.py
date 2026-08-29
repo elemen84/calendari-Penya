@@ -1,0 +1,2 @@
+"""Penya calendar synchronization package."""
+

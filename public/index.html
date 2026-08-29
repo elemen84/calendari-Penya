@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendari de la Penya</title>
+    <meta name="description" content="Calendari actualitzat dels partits del Joventut de Badalona a la Liga Endesa i la Basketball Champions League.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Calendari de la Penya">
+    <meta property="og:description" content="Tots els partits de la Penya al teu calendari.">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-mark" aria-hidden="true">🏀</div>
+        <p class="eyebrow">Joventut de Badalona</p>
+        <h1 id="page-title">Calendari de la Penya</h1>
+        <p class="hero-lede">Tots els partits de la Penya al teu calendari.</p>
+        <p class="hero-copy">Subscriu-t'hi una vegada i els canvis d'horari i de data s'actualitzaran automàticament.</p>
+        <button class="primary-button" id="subscribe-button" type="button">
+          SUBSCRIU-TE AL CALENDARI
+          <span aria-hidden="true">↗</span>
+        </button>
+      </section>
+
+      <section class="competition-grid" aria-label="Competicions">
+        <article class="competition-card">
+          <span class="card-kicker">ACB</span>
+          <h2>Liga Endesa</h2>
+          <p>Partits i classificació actualitzada.</p>
+        </article>
+        <article class="competition-card">
+          <span class="card-kicker">BCL</span>
+          <h2>Basketball Champions League</h2>
+          <p>Partits i horaris de la Penya.</p>
+        </article>
+      </section>
+
+      <footer class="page-footer">
+        <span>Actualització automàtica cada 48 hores.</span>
+        <span class="footer-dot" aria-hidden="true">·</span>
+        <span>La freqüència final pot variar segons l'aplicació de calendari.</span>
+      </footer>
+    </main>
+
+    <div class="modal" id="subscribe-modal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="close-button" id="close-modal" type="button" aria-label="Tanca">×</button>
+        <p class="eyebrow">Calendari de la Penya</p>
+        <h2 id="modal-title">Tria on vols afegir-lo</h2>
+        <div class="subscribe-options">
+          <a class="subscribe-option" id="google-link" href="#" target="_blank" rel="noopener">
+            <span class="option-icon" aria-hidden="true">G</span>
+            <span>
+              <strong>Google Calendar</strong>
+              <small>Obre Google Calendar</small>
+            </span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="subscribe-option" id="apple-link" href="#">
+            <span class="option-icon" aria-hidden="true"></span>
+            <span>
+              <strong>Apple Calendar / iPhone / Mac</strong>
+              <small>Afegeix la subscripció</small>
+            </span>
+            <span aria-hidden="true">→</span>
+          </a>
+          <a class="subscribe-option" id="other-link" href="#">
+            <span class="option-icon" aria-hidden="true">＋</span>
+            <span>
+              <strong>Altres calendaris</strong>
+              <small>Obre l'aplicació compatible</small>
+            </span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <p class="modal-note">Subscriu-t'hi una vegada. Les actualitzacions futures dependran del ritme de refresc de la teva aplicació.</p>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+"""Official competition adapters."""
+

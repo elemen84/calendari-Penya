@@ -1,0 +1,2 @@
+"""Calendar output adapters."""
+
