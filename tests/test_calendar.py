@@ -4,13 +4,21 @@ from zoneinfo import ZoneInfo
 
 import pytest
 
-from src.calendar.formatting import description_for_game, title_for_game
+from src.calendar.formatting import (
+    description_for_game,
+    html_description_for_game,
+    title_for_game,
+)
 from src.calendar.ics import render_ics
 from src.models import Game
 from src.normalize import source_key
-from src.standings.snapshots import StandingRow, StandingsSnapshot
+from src.standings.snapshots import FIGURE_SPACE, StandingRow, StandingsSnapshot
 
 MADRID = ZoneInfo("Europe/Madrid")
+
+
+def _ascii(text: str) -> str:
+    return text.replace(FIGURE_SPACE, " ")
 
 
 def make_game(hour: int = 20, status: str = "scheduled") -> Game:
@@ -73,13 +81,15 @@ def test_acb_event_content_uses_catalan_labels_and_keeps_official_values() -> No
     )
 
     description = description_for_game(game, standings)
+    ascii_description = _ascii(description)
     content = "\n".join((title_for_game(game), description))
 
     assert "🏆 Liga Endesa" in content
-    assert "#  Equip                  PJ  G  P" in description
-    assert "1  Real Madrid            11 10  1" in description
-    assert "2  Valencia Basket        11  9  2" in description
-    assert "3  Joventut Badalona      11  8  3" in description
+    assert FIGURE_SPACE in description
+    assert " #  Equip                  PJ  G  P" in ascii_description
+    assert " 1  Real Madrid            11 10  1" in ascii_description
+    assert " 2  Valencia Basket        11  9  2" in ascii_description
+    assert " 3  Joventut Badalona      11  8  3" in ascii_description
     assert "Real Madrid — 10-1" not in description
     assert "Valencia Basket — 9-2" not in description
     assert "Asisa Joventut" not in description
@@ -120,15 +130,26 @@ def test_acb_standings_table_survives_ics_escaping_and_folding() -> None:
         ),
     )
     description = description_for_game(game, standings)
-    feed = render_ics([game], {source_key(game): description})
+    html = html_description_for_game(game, standings)
+    feed = render_ics(
+        [game],
+        {source_key(game): description},
+        html_descriptions={source_key(game): html},
+    )
 
     assert "DESCRIPTION:" in feed
+    assert "X-ALT-DESC;FMTTYPE=text/html:" in feed
     assert "\\n" in feed
     assert "\r\n" in feed
-    unfolded = feed.replace("\r\n ", "").replace("\r\n", "\n")
-    assert "#  Equip                  PJ  G  P" in unfolded
+    unfolded = _ascii(feed.replace("\r\n ", "").replace("\r\n", "\n"))
+    assert " #  Equip                  PJ  G  P" in unfolded
     assert "Joventut Badalona" in unfolded
-    assert "1  Real Madrid            11 10  1" in unfolded
+    assert " 1  Real Madrid            11 10  1" in unfolded
+    assert "<pre style=" in unfolded
+    assert "font-family:ui-monospace" in unfolded
+    assert FIGURE_SPACE not in html
+    assert " #  Equip                  PJ  G  P" in html
+    assert "Asisa Joventut" not in html
 
 
 def test_acb_event_uses_catalan_unavailable_standings_message() -> None:

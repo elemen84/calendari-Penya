@@ -59,6 +59,7 @@ def test_sync_generates_ics_without_google_configuration(
     prepared = PreparedSync(
         games=(game,),
         descriptions={key: "🏆 Liga Endesa"},
+        html_descriptions={},
         acb=acb,
         bcl=bcl,
         stats=SyncStats(acb_games=1),

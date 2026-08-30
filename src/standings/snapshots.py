@@ -124,6 +124,8 @@ class StandingsSnapshotStore:
 
 
 TEAM_COLUMN_WIDTH = 22
+# FIGURE SPACE (U+2007): digit-width; resists collapse better than U+0020 in many UIs.
+FIGURE_SPACE = "\u2007"
 
 
 def _fit_team_name(name: str, width: int = TEAM_COLUMN_WIDTH) -> str:
@@ -132,21 +134,41 @@ def _fit_team_name(name: str, width: int = TEAM_COLUMN_WIDTH) -> str:
     return name[:width].rstrip()
 
 
-def format_rows(snapshot: StandingsSnapshot | None) -> str:
-    """Render ACB standings as a compact fixed-width plaintext table for ICS DESCRIPTION."""
+def _pad_left(text: str, width: int, *, pad: str) -> str:
+    gap = width - len(text)
+    return (pad * gap + text) if gap > 0 else text
+
+
+def _pad_right(text: str, width: int, *, pad: str) -> str:
+    gap = width - len(text)
+    return (text + pad * gap) if gap > 0 else text
+
+
+def format_rows(snapshot: StandingsSnapshot | None, *, pad: str = FIGURE_SPACE) -> str:
+    """Render ACB standings as a compact fixed-width plaintext table for ICS DESCRIPTION.
+
+    Default pad is FIGURE SPACE for DESCRIPTION (proportional UIs). Pass pad=' ' for
+    HTML <pre> monospace alternative.
+    """
 
     if snapshot is None or not snapshot.rows:
         return "Classificació encara no disponible"
 
     header = (
-        f"{'#':<3}{'Equip':<{TEAM_COLUMN_WIDTH}} "
-        f"{'PJ':>2} {'G':>2} {'P':>2}"
+        f"{_pad_left('#', 2, pad=pad)}{pad * 2}"
+        f"{_pad_right('Equip', TEAM_COLUMN_WIDTH, pad=pad)}{pad}"
+        f"{_pad_left('PJ', 2, pad=pad)}{pad}"
+        f"{_pad_left('G', 2, pad=pad)}{pad}"
+        f"{_pad_left('P', 2, pad=pad)}"
     )
     lines = [header]
     for row in snapshot.rows:
         team = _fit_team_name(standings_display_name(row.team))
         lines.append(
-            f"{row.position:<3}{team:<{TEAM_COLUMN_WIDTH}} "
-            f"{row.matches_played:>2} {row.wins:>2} {row.losses:>2}"
+            f"{_pad_left(str(row.position), 2, pad=pad)}{pad * 2}"
+            f"{_pad_right(team, TEAM_COLUMN_WIDTH, pad=pad)}{pad}"
+            f"{_pad_left(str(row.matches_played), 2, pad=pad)}{pad}"
+            f"{_pad_left(str(row.wins), 2, pad=pad)}{pad}"
+            f"{_pad_left(str(row.losses), 2, pad=pad)}"
         )
     return "\n".join(lines)
