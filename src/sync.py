@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 
-from src.calendar.formatting import description_for_game, html_description_for_game
+from src.calendar.formatting import description_for_game
 from src.calendar.ics import write_ics
 from src.models import Game
 from src.normalize import source_key
@@ -28,7 +28,6 @@ class SyncStats:
 class PreparedSync:
     games: tuple[Game, ...]
     descriptions: dict[str, str]
-    html_descriptions: dict[str, str]
     acb: ACBData
     bcl: BCLData
     stats: SyncStats
@@ -81,13 +80,14 @@ def prepare_sync(
         standings_by_key[key] = snapshot
 
     all_games = tuple(acb_data.games) + tuple(bcl_data.games)
-    descriptions: dict[str, str] = {}
-    html_descriptions: dict[str, str] = {}
-    for game in all_games:
-        key = source_key(game)
-        snapshot = standings_by_key.get(key)
-        descriptions[key] = description_for_game(game, snapshot, updated_at=now)
-        html_descriptions[key] = html_description_for_game(game, snapshot, updated_at=now)
+    descriptions = {
+        source_key(game): description_for_game(
+            game,
+            standings_by_key.get(source_key(game)),
+            updated_at=now,
+        )
+        for game in all_games
+    }
     stats = SyncStats(
         acb_games=len(acb_data.games),
         bcl_games=len(bcl_data.games),
@@ -97,7 +97,7 @@ def prepare_sync(
         standings_available=current_standings is not None,
         current_round=current_standings.round_number if current_standings else None,
     )
-    return PreparedSync(all_games, descriptions, html_descriptions, acb_data, bcl_data, stats)
+    return PreparedSync(all_games, descriptions, acb_data, bcl_data, stats)
 
 
 def execute_sync(
@@ -105,10 +105,5 @@ def execute_sync(
     *,
     ics_path: Path,
 ) -> SyncStats:
-    write_ics(
-        ics_path,
-        prepared.games,
-        prepared.descriptions,
-        html_descriptions=prepared.html_descriptions,
-    )
+    write_ics(ics_path, prepared.games, prepared.descriptions)
     return prepared.stats

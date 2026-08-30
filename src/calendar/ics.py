@@ -31,13 +31,7 @@ def _datetime_value(value: datetime) -> str:
     return value.astimezone(MADRID_TZ).strftime("%Y%m%dT%H%M%S")
 
 
-def render_ics(
-    games: list[Game] | tuple[Game, ...],
-    descriptions: dict[str, str],
-    *,
-    html_descriptions: dict[str, str] | None = None,
-) -> str:
-    html_descriptions = html_descriptions or {}
+def render_ics(games: list[Game] | tuple[Game, ...], descriptions: dict[str, str]) -> str:
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -64,21 +58,15 @@ def render_ics(
                 "DTSTAMP:20000101T000000Z",
                 f"SUMMARY:{_escape(title_for_game(game))}",
                 f"DESCRIPTION:{_escape(descriptions.get(key, ''))}",
+                "STATUS:"
+                + (
+                    "CANCELLED"
+                    if game.status == "cancelled"
+                    else "TENTATIVE"
+                    if game.status == "postponed"
+                    else "CONFIRMED"
+                ),
             ]
-        )
-        html = html_descriptions.get(key)
-        if html:
-            # Outlook-class clients; Google/Apple typically ignore X-ALT-DESC.
-            lines.append(f"X-ALT-DESC;FMTTYPE=text/html:{_escape(html)}")
-        lines.append(
-            "STATUS:"
-            + (
-                "CANCELLED"
-                if game.status == "cancelled"
-                else "TENTATIVE"
-                if game.status == "postponed"
-                else "CONFIRMED"
-            )
         )
         if game.venue:
             lines.append(f"LOCATION:{_escape(game.venue)}")
@@ -102,11 +90,6 @@ def write_ics(
     path: Path,
     games: list[Game] | tuple[Game, ...],
     descriptions: dict[str, str],
-    *,
-    html_descriptions: dict[str, str] | None = None,
 ) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        render_ics(games, descriptions, html_descriptions=html_descriptions),
-        encoding="utf-8",
-    )
+    path.write_text(render_ics(games, descriptions), encoding="utf-8")

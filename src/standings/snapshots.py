@@ -18,6 +18,10 @@ class StandingRow:
     matches_played: int
     wins: int
     losses: int
+    # Official ACB fields when present (optional for older snapshots).
+    points_for: int | None = None
+    points_against: int | None = None
+    point_difference: int | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -31,6 +35,12 @@ class StandingsSnapshot:
 
 class SnapshotError(RuntimeError):
     pass
+
+
+def _optional_int(item: dict[str, Any], key: str) -> int | None:
+    if key not in item or item[key] is None:
+        return None
+    return int(item[key])
 
 
 def snapshot_from_api(
@@ -58,6 +68,16 @@ def snapshot_from_api(
             raise SnapshotError("ACB standings contains a non-object row")
         try:
             team_id = int(item["teamId"])
+            points_for = _optional_int(item, "pointsFor")
+            points_against = _optional_int(item, "pointsAgainst")
+            # Official differential from ACB when present.
+            point_difference = _optional_int(item, "plusMinus")
+            if (
+                point_difference is None
+                and points_for is not None
+                and points_against is not None
+            ):
+                point_difference = points_for - points_against
             rows.append(
                 StandingRow(
                     position=int(item["position"]),
@@ -65,12 +85,30 @@ def snapshot_from_api(
                     matches_played=int(item["matchesPlayed"]),
                     wins=int(item["wins"]),
                     losses=int(item["loses"]),
+                    points_for=points_for,
+                    points_against=points_against,
+                    point_difference=point_difference,
                 )
             )
         except (KeyError, TypeError, ValueError) as exc:
             raise SnapshotError("ACB standings row is incomplete") from exc
     rows.sort(key=lambda row: row.position)
     return StandingsSnapshot(season, round_number, captured_at, source_url, tuple(rows))
+
+
+def _row_from_payload(row: dict[str, Any]) -> StandingRow:
+    """Load a StandingRow; unknown/missing optional score fields stay None."""
+
+    return StandingRow(
+        position=int(row["position"]),
+        team=str(row["team"]),
+        matches_played=int(row["matches_played"]),
+        wins=int(row["wins"]),
+        losses=int(row["losses"]),
+        points_for=_optional_int(row, "points_for"),
+        points_against=_optional_int(row, "points_against"),
+        point_difference=_optional_int(row, "point_difference"),
+    )
 
 
 class StandingsSnapshotStore:
@@ -86,7 +124,7 @@ class StandingsSnapshotStore:
             return None
         try:
             payload = json.loads(path.read_text(encoding="utf-8"))
-            rows = tuple(StandingRow(**row) for row in payload["rows"])
+            rows = tuple(_row_from_payload(row) for row in payload["rows"])
             return StandingsSnapshot(
                 season=str(payload["season"]),
                 round_number=payload.get("round_number"),
@@ -123,52 +161,32 @@ class StandingsSnapshotStore:
         return path
 
 
-TEAM_COLUMN_WIDTH = 22
-# FIGURE SPACE (U+2007): digit-width; resists collapse better than U+0020 in many UIs.
-FIGURE_SPACE = "\u2007"
+def _stats_line(row: StandingRow) -> str:
+    parts = [
+        f"{row.matches_played} PJ",
+        f"{row.wins} G",
+        f"{row.losses} P",
+    ]
+    if row.points_for is not None and row.points_against is not None:
+        parts.append(f"PF {row.points_for}")
+        parts.append(f"PC {row.points_against}")
+        difference = row.point_difference
+        if difference is None:
+            difference = row.points_for - row.points_against
+        parts.append(f"{difference:+d}")
+    elif row.point_difference is not None:
+        parts.append(f"Dif {row.point_difference:+d}")
+    return "   " + " · ".join(parts)
 
 
-def _fit_team_name(name: str, width: int = TEAM_COLUMN_WIDTH) -> str:
-    if len(name) <= width:
-        return name
-    return name[:width].rstrip()
-
-
-def _pad_left(text: str, width: int, *, pad: str) -> str:
-    gap = width - len(text)
-    return (pad * gap + text) if gap > 0 else text
-
-
-def _pad_right(text: str, width: int, *, pad: str) -> str:
-    gap = width - len(text)
-    return (text + pad * gap) if gap > 0 else text
-
-
-def format_rows(snapshot: StandingsSnapshot | None, *, pad: str = FIGURE_SPACE) -> str:
-    """Render ACB standings as a compact fixed-width plaintext table for ICS DESCRIPTION.
-
-    Default pad is FIGURE SPACE for DESCRIPTION (proportional UIs). Pass pad=' ' for
-    HTML <pre> monospace alternative.
-    """
+def format_rows(snapshot: StandingsSnapshot | None) -> str:
+    """Render ACB standings as a compact vertical plaintext block for ICS DESCRIPTION."""
 
     if snapshot is None or not snapshot.rows:
         return "Classificació encara no disponible"
 
-    header = (
-        f"{_pad_left('#', 2, pad=pad)}{pad * 2}"
-        f"{_pad_right('Equip', TEAM_COLUMN_WIDTH, pad=pad)}{pad}"
-        f"{_pad_left('PJ', 2, pad=pad)}{pad}"
-        f"{_pad_left('G', 2, pad=pad)}{pad}"
-        f"{_pad_left('P', 2, pad=pad)}"
-    )
-    lines = [header]
+    blocks: list[str] = []
     for row in snapshot.rows:
-        team = _fit_team_name(standings_display_name(row.team))
-        lines.append(
-            f"{_pad_left(str(row.position), 2, pad=pad)}{pad * 2}"
-            f"{_pad_right(team, TEAM_COLUMN_WIDTH, pad=pad)}{pad}"
-            f"{_pad_left(str(row.matches_played), 2, pad=pad)}{pad}"
-            f"{_pad_left(str(row.wins), 2, pad=pad)}{pad}"
-            f"{_pad_left(str(row.losses), 2, pad=pad)}"
-        )
-    return "\n".join(lines)
+        team = standings_display_name(row.team)
+        blocks.append(f"{row.position}. {team}\n{_stats_line(row)}")
+    return "\n\n".join(blocks)
