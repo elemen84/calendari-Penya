@@ -8,6 +8,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from src.normalize import standings_display_name
+
 
 @dataclass(frozen=True, slots=True)
 class StandingRow:
@@ -121,9 +123,30 @@ class StandingsSnapshotStore:
         return path
 
 
+TEAM_COLUMN_WIDTH = 22
+
+
+def _fit_team_name(name: str, width: int = TEAM_COLUMN_WIDTH) -> str:
+    if len(name) <= width:
+        return name
+    return name[:width].rstrip()
+
+
 def format_rows(snapshot: StandingsSnapshot | None) -> str:
+    """Render ACB standings as a compact fixed-width plaintext table for ICS DESCRIPTION."""
+
     if snapshot is None or not snapshot.rows:
         return "Classificació encara no disponible"
-    return "\n".join(
-        f"{row.position}. {row.team} — {row.wins}-{row.losses}" for row in snapshot.rows
+
+    header = (
+        f"{'#':<3}{'Equip':<{TEAM_COLUMN_WIDTH}} "
+        f"{'PJ':>2} {'G':>2} {'P':>2}"
     )
+    lines = [header]
+    for row in snapshot.rows:
+        team = _fit_team_name(standings_display_name(row.team))
+        lines.append(
+            f"{row.position:<3}{team:<{TEAM_COLUMN_WIDTH}} "
+            f"{row.matches_played:>2} {row.wins:>2} {row.losses:>2}"
+        )
+    return "\n".join(lines)

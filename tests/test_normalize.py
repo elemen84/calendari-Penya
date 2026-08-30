@@ -5,7 +5,13 @@ from zoneinfo import ZoneInfo
 import pytest
 
 from src.models import Game
-from src.normalize import display_team_name, is_penya_team, normalize_team_name, source_key
+from src.normalize import (
+    display_team_name,
+    is_penya_team,
+    normalize_team_name,
+    source_key,
+    standings_display_name,
+)
 
 
 @pytest.mark.parametrize(
@@ -22,6 +28,7 @@ from src.normalize import display_team_name, is_penya_team, normalize_team_name,
 def test_joventut_aliases_are_recognized(name: str) -> None:
     assert is_penya_team(name)
     assert display_team_name(name) == "Penya"
+    assert standings_display_name(name) == "Joventut Badalona"
 
 
 def test_other_categories_are_not_recognized_as_the_first_team() -> None:

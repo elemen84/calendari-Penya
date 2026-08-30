@@ -37,6 +37,46 @@ def display_team_name(name: str) -> str:
     return "Penya" if is_penya_team(name) else name.strip()
 
 
+# Club stems → short sporting names for standings presentation only.
+# Longer / more specific needles first. Unknown teams fall back to the original name.
+_STANDINGS_CLUB_ALIASES: tuple[tuple[str, str], ...] = (
+    ("san pablo burgos", "San Pablo Burgos"),
+    ("gran canaria", "Gran Canaria"),
+    ("real madrid", "Real Madrid"),
+    ("valencia", "Valencia Basket"),
+    ("baskonia", "Baskonia"),
+    ("bilbao", "Bilbao Basket"),
+    ("manresa", "Manresa"),
+    ("andorra", "Andorra"),
+    ("obradoiro", "Obradoiro"),
+    ("coruna", "Coruña"),
+    ("breogan", "Breogán"),
+    ("tenerife", "Tenerife"),
+    ("zaragoza", "Zaragoza"),
+    ("girona", "Girona"),
+    ("lleida", "Lleida"),
+    ("granada", "Granada"),
+    ("murcia", "UCAM Murcia"),
+    ("unicaja", "Unicaja"),
+    ("barca", "Barça"),
+)
+
+
+def standings_display_name(name: str) -> str:
+    """Short sporting name for ACB standings rows. Does not mutate stored names."""
+
+    cleaned = name.strip()
+    if not cleaned:
+        return cleaned
+    if is_penya_team(cleaned):
+        return "Joventut Badalona"
+    key = normalize_team_name(cleaned)
+    for needle, display in _STANDINGS_CLUB_ALIASES:
+        if needle in key:
+            return display
+    return cleaned
+
+
 def season_label(start_year: int) -> str:
     return f"{start_year}-{str(start_year + 1)[-2:]}"
 

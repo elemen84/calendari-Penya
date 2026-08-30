@@ -68,16 +68,21 @@ def test_acb_event_content_uses_catalan_labels_and_keeps_official_values() -> No
         rows=(
             StandingRow(1, "Real Madrid", 11, 10, 1),
             StandingRow(2, "Valencia Basket", 11, 9, 2),
+            StandingRow(3, "Asisa Joventut", 11, 8, 3),
         ),
     )
 
-    content = "\n".join(
-        (title_for_game(game), description_for_game(game, standings))
-    )
+    description = description_for_game(game, standings)
+    content = "\n".join((title_for_game(game), description))
 
     assert "🏆 Liga Endesa" in content
-    assert "Real Madrid — 10-1" in content
-    assert "Valencia Basket — 9-2" in content
+    assert "#  Equip                  PJ  G  P" in description
+    assert "1  Real Madrid            11 10  1" in description
+    assert "2  Valencia Basket        11  9  2" in description
+    assert "3  Joventut Badalona      11  8  3" in description
+    assert "Real Madrid — 10-1" not in description
+    assert "Valencia Basket — 9-2" not in description
+    assert "Asisa Joventut" not in description
     assert "📍 Palau Olímpic de Badalona" in content
     assert "📊 CLASSIFICACIÓ" in content
     assert "Classificació encara no disponible" not in content
@@ -100,6 +105,30 @@ def test_acb_event_content_uses_catalan_labels_and_keeps_official_values() -> No
         "Pending",
     ):
         assert forbidden not in content
+
+
+def test_acb_standings_table_survives_ics_escaping_and_folding() -> None:
+    game = make_game()
+    standings = StandingsSnapshot(
+        season="2026-27",
+        round_number=12,
+        captured_at=datetime(2026, 12, 14, 6, 15, tzinfo=MADRID),
+        source_url="https://api2.acb.com/api/seasondata/Competition/standings",
+        rows=(
+            StandingRow(1, "Real Madrid", 11, 10, 1),
+            StandingRow(2, "Asisa Joventut", 11, 8, 3),
+        ),
+    )
+    description = description_for_game(game, standings)
+    feed = render_ics([game], {source_key(game): description})
+
+    assert "DESCRIPTION:" in feed
+    assert "\\n" in feed
+    assert "\r\n" in feed
+    unfolded = feed.replace("\r\n ", "").replace("\r\n", "\n")
+    assert "#  Equip                  PJ  G  P" in unfolded
+    assert "Joventut Badalona" in unfolded
+    assert "1  Real Madrid            11 10  1" in unfolded
 
 
 def test_acb_event_uses_catalan_unavailable_standings_message() -> None:
