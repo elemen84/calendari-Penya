@@ -34,7 +34,7 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Read sources and generate ICS without persisting sync state or snapshots",
     )
-    parser.add_argument("--force", action="store_true", help="Ignore the 48-hour sync gate")
+    parser.add_argument("--force", action="store_true", help="Ignore the 24-hour sync gate")
     return parser.parse_args()
 
 
@@ -63,8 +63,8 @@ def should_sync(state: dict[str, object], now: datetime, force: bool) -> tuple[b
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=TZ)
     elapsed = now - parsed.astimezone(TZ)
-    if elapsed < timedelta(hours=48):
-        next_at = parsed.astimezone(TZ) + timedelta(hours=48)
+    if elapsed < timedelta(hours=24):
+        next_at = parsed.astimezone(TZ) + timedelta(hours=24)
         return False, next_at.strftime("%d/%m/%Y %H:%M %Z")
     return True, None
 

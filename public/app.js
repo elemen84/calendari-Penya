@@ -4,7 +4,6 @@
   const closeButton = document.getElementById("close-modal");
   const googleOption = document.getElementById("google-option");
   const appleLink = document.getElementById("apple-link");
-  const otherLink = document.getElementById("other-link");
   const subscribeOptions = document.querySelector(".subscribe-options");
   const modalPlaceholder = document.getElementById("modal-placeholder");
   const googleGuide = document.getElementById("google-guide");
@@ -29,7 +28,6 @@
     const webcalUrl = httpsUrl.replace(/^https:/, "webcal:");
     feedUrl.textContent = httpsUrl;
     appleLink.href = webcalUrl;
-    otherLink.href = webcalUrl;
   }
 
   function showOptions() {

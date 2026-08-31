@@ -12,12 +12,12 @@ on:
       - "public/assets/**"
   schedule:
     # 06:15 Europe/Madrid during summer time. GitHub cron is UTC and does not
-    # follow DST; the daily run plus the 48-hour gate is intentional.
+    # follow DST; the daily run plus the 24-hour gate is intentional.
     - cron: "15 4 * * *"
   workflow_dispatch:
     inputs:
       force:
-        description: "Ignore the 48-hour gate"
+        description: "Ignore the 24-hour gate"
         required: false
         default: false
         type: boolean

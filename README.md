@@ -7,7 +7,7 @@ Incluye únicamente:
 - Liga Endesa / ACB.
 - Basketball Champions League / BCL.
 
-No usa servidor permanente, Railway, base de datos ni frontend. GitHub Actions ejecuta el script una vez al día; el script solo genera una nueva versión si han transcurrido al menos 48 horas desde la última sincronización correcta.
+No usa servidor permanente, Railway, base de datos ni frontend. GitHub Actions ejecuta el script una vez al día; el script solo genera una nueva versión si han transcurrido al menos 24 horas desde la última sincronización correcta.
 
 ## Fuentes oficiales
 
@@ -89,7 +89,7 @@ El script obtiene los datos reales al ejecutarse. Para consultar las fuentes y g
 python scripts/sync_calendar.py --dry-run --force
 ```
 
-`--force` ignora el límite de 48 horas. Sin `--force`, una ejecución posterior a la última correcta dentro de 48 horas termina limpiamente. `--dry-run` consulta las fuentes y genera el ICS sin guardar el estado ni snapshots.
+`--force` ignora el límite de 24 horas. Sin `--force`, una ejecución posterior a la última correcta dentro de 24 horas termina limpiamente. `--dry-run` consulta las fuentes y genera el ICS sin guardar el estado ni snapshots.
 
 También se puede establecer `PENYA_SEASON_START_YEAR=2026` para fijar explícitamente la temporada. Si no se establece, ACB selecciona la temporada actual publicada.
 
@@ -97,7 +97,7 @@ También se puede establecer `PENYA_SEASON_START_YEAR=2026` para fijar explícit
 
 La ejecución normal no necesita secrets. Las variables `PENYA_SEASON_START_YEAR`, `ACB_API_KEY` y `BCL_APIM_SUBSCRIPTION_KEY` son opcionales; los adapters tienen valores públicos por defecto.
 
-El workflow `.github/workflows/sync-calendar.yml` ejecuta el proceso diariamente a las `04:15 UTC`. Eso corresponde a las `06:15` en horario de verano de Madrid y a las `05:15` en horario de invierno. GitHub Actions cron funciona en UTC y no sigue automáticamente el cambio de hora; la ejecución diaria y el control interno de 48 horas evitan depender de una expresión `*/2` incorrecta alrededor del cambio de mes.
+El workflow `.github/workflows/sync-calendar.yml` ejecuta el proceso diariamente a las `04:15 UTC`. Eso corresponde a las `06:15` en horario de verano de Madrid y a las `05:15` en horario de invierno. GitHub Actions cron funciona en UTC y no sigue automáticamente el cambio de hora; la ejecución diaria y el control interno de 24 horas evitan depender de una expresión cron incorrecta alrededor del cambio de mes.
 
 El workflow tiene `workflow_dispatch`; marca `force` para forzar una sincronización manual. Tras una sincronización completa, solo se hace commit si han cambiado `data/sync-state.json`, snapshots o `public/penya.ics`.
 
@@ -105,7 +105,9 @@ Para que el workflow pueda hacer commit y publicar, la configuración del reposi
 
 ## Landing pública y GitHub Pages
 
-La landing está en `public/index.html`, con sus estilos y comportamiento en `public/styles.css` y `public/app.js`. El mismo directorio contiene `penya.ics`, por lo que GitHub Pages publica la landing y el feed desde el mismo artefacto. La interfaz pública solo ofrece suscripción: Google Calendar recibe la URL HTTPS mediante su mecanismo `cid`, y Apple/otros calendarios reciben una URL `webcal://`. No se usa ninguna API de calendario.
+La landing está en `public/index.html`, con sus estilos y comportamiento en `public/styles.css` y `public/app.js`. El mismo directorio contiene `penya.ics`, por lo que GitHub Pages publica la landing y el feed desde el mismo artefacto. La interfaz pública solo ofrece suscripción: Google Calendar mediante la URL HTTPS del feed (guía manual en el modal) y Apple Calendar mediante una URL `webcal://`. No se usa ninguna API de calendario.
+
+El feed de Penya se regenera aproximadamente cada 24 horas. Google Calendar y Apple Calendar deciden por su cuenta cuándo refrescan un calendario suscrito; la landing no promete una actualización visible exacta cada 24 horas en el dispositivo del usuario.
 
 El escut de la landing es opcional: si se añade `public/assets/penya-shield.png`, se muestra automáticamente; si no está presente, la interfaz utiliza un fallback discreto.
 
@@ -129,7 +131,7 @@ La landing calcula automáticamente estas URLs a partir del dominio y la ruta do
 
 ## ICS
 
-Cada ejecución que pasa el control de 48 horas genera `public/penya.ics`, incluso en dry-run. Los UID tienen la forma `<source-key>@penya-calendar` y no cambian cuando cambia la hora del partido. GitHub Pages sirve ese archivo como feed público para las suscripciones.
+Cada ejecución que pasa el control de 24 horas genera `public/penya.ics`, incluso en dry-run. Los UID tienen la forma `<source-key>@penya-calendar` y no cambian cuando cambia la hora del partido. GitHub Pages sirve ese archivo como feed público para las suscripciones.
 
 ## Tests, lint y diagnóstico
 

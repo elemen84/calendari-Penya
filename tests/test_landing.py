@@ -40,7 +40,14 @@ def test_google_calendar_shows_manual_subscription_guide() -> None:
     assert "La freqüència final" not in html
     assert "white-space: nowrap" in styles
     assert "Des d'un ordinador, obre Google Calendar." in html
-    assert "Altres calendaris → + → Des d'URL." in html
+    assert "A la barra lateral, ves a" in html
+    assert "+ → Des d'URL" in html
+    assert "Altres calendaris" not in html
+    assert "Altres calendaris" not in app
+    assert 'id="other-link"' not in html
+    assert "other-link" not in app
+    assert "Google Calendar" in html
+    assert "Apple Calendar" in html
     assert 'id="copy-feed-url"' in html
     assert "Mostra'n més" in html
     assert "Sincronitza" in html
@@ -73,7 +80,7 @@ def test_landing_remains_in_catalan() -> None:
     assert '<html lang="ca">' in html
     assert "Calendari de la Penya" in html
     assert "Subscriu-t'hi una vegada" in html
-    assert "Actualització automàtica cada 48 hores." in html
+    assert "Actualització automàtica cada 24 hores." in html
     assert "Liga Endesa" in html
     assert "Basketball Champions League" in html
 
@@ -105,7 +112,7 @@ def test_workflow_keeps_daily_run_and_publishes_public_directory() -> None:
     script = (ROOT / "scripts/sync_calendar.py").read_text(encoding="utf-8")
 
     assert 'cron: "15 4 * * *"' in workflow
-    assert "timedelta(hours=48)" in script
+    assert "timedelta(hours=24)" in script
     assert "actions/upload-pages-artifact@v3" in workflow
     assert "path: public" in workflow
     assert "actions/deploy-pages@v4" in workflow

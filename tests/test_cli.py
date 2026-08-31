@@ -12,13 +12,22 @@ from src.sync import PreparedSync, SyncStats, execute_sync
 MADRID = ZoneInfo("Europe/Madrid")
 
 
-def test_sync_gate_waits_until_48_hours() -> None:
+def test_sync_gate_waits_until_24_hours() -> None:
     now = datetime(2026, 8, 28, 6, 15, tzinfo=MADRID)
-    recent = (now - timedelta(hours=47, minutes=59)).isoformat()
+    recent = (now - timedelta(hours=23, minutes=59)).isoformat()
     allowed, next_at = should_sync({"last_successful_sync": recent}, now, force=False)
 
     assert not allowed
     assert next_at is not None
+
+
+def test_sync_gate_allows_after_24_hours() -> None:
+    now = datetime(2026, 8, 28, 6, 15, tzinfo=MADRID)
+    eligible = (now - timedelta(hours=24)).isoformat()
+    allowed, next_at = should_sync({"last_successful_sync": eligible}, now, force=False)
+
+    assert allowed
+    assert next_at is None
 
 
 def test_force_bypasses_sync_gate() -> None:
