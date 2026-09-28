@@ -1,0 +1,188 @@
+{
+  "captured_at": "2026-09-28T12:54:06.989467+02:00",
+  "round_number": 1,
+  "rows": [
+    {
+      "losses": 0,
+      "matches_played": 1,
+      "point_difference": 18,
+      "points_against": 101,
+      "points_for": 119,
+      "position": 1,
+      "team": "Barça",
+      "wins": 1
+    },
+    {
+      "losses": 0,
+      "matches_played": 1,
+      "point_difference": 15,
+      "points_against": 92,
+      "points_for": 107,
+      "position": 2,
+      "team": "Surne Bilbao",
+      "wins": 1
+    },
+    {
+      "losses": 0,
+      "matches_played": 1,
+      "point_difference": 7,
+      "points_against": 77,
+      "points_for": 84,
+      "position": 3,
+      "team": "FIATC Girona",
+      "wins": 1
+    },
+    {
+      "losses": 0,
+      "matches_played": 1,
+      "point_difference": 6,
+      "points_against": 104,
+      "points_for": 110,
+      "position": 4,
+      "team": "Río Breogán",
+      "wins": 1
+    },
+    {
+      "losses": 0,
+      "matches_played": 1,
+      "point_difference": 5,
+      "points_against": 100,
+      "points_for": 105,
+      "position": 5,
+      "team": "iLERNA Lleida",
+      "wins": 1
+    },
+    {
+      "losses": 0,
+      "matches_played": 1,
+      "point_difference": 5,
+      "points_against": 85,
+      "points_for": 90,
+      "position": 6,
+      "team": "Monbus Obradoiro",
+      "wins": 1
+    },
+    {
+      "losses": 0,
+      "matches_played": 1,
+      "point_difference": 2,
+      "points_against": 87,
+      "points_for": 89,
+      "position": 7,
+      "team": "Real Madrid",
+      "wins": 1
+    },
+    {
+      "losses": 0,
+      "matches_played": 1,
+      "point_difference": 1,
+      "points_against": 97,
+      "points_for": 98,
+      "position": 8,
+      "team": "Kosner Baskonia",
+      "wins": 1
+    },
+    {
+      "losses": 0,
+      "matches_played": 1,
+      "point_difference": 1,
+      "points_against": 80,
+      "points_for": 81,
+      "position": 9,
+      "team": "Casademont Zaragoza",
+      "wins": 1
+    },
+    {
+      "losses": 1,
+      "matches_played": 1,
+      "point_difference": -1,
+      "points_against": 98,
+      "points_for": 97,
+      "position": 10,
+      "team": "Recoletas Salud San Pablo Burgos",
+      "wins": 0
+    },
+    {
+      "losses": 1,
+      "matches_played": 1,
+      "point_difference": -1,
+      "points_against": 81,
+      "points_for": 80,
+      "position": 11,
+      "team": "La Laguna Tenerife",
+      "wins": 0
+    },
+    {
+      "losses": 1,
+      "matches_played": 1,
+      "point_difference": -2,
+      "points_against": 89,
+      "points_for": 87,
+      "position": 12,
+      "team": "Unicaja",
+      "wins": 0
+    },
+    {
+      "losses": 1,
+      "matches_played": 1,
+      "point_difference": -5,
+      "points_against": 105,
+      "points_for": 100,
+      "position": 13,
+      "team": "Valencia Basket",
+      "wins": 0
+    },
+    {
+      "losses": 1,
+      "matches_played": 1,
+      "point_difference": -5,
+      "points_against": 90,
+      "points_for": 85,
+      "position": 14,
+      "team": "MoraBanc Andorra",
+      "wins": 0
+    },
+    {
+      "losses": 1,
+      "matches_played": 1,
+      "point_difference": -6,
+      "points_against": 110,
+      "points_for": 104,
+      "position": 15,
+      "team": "Asisa Joventut",
+      "wins": 0
+    },
+    {
+      "losses": 1,
+      "matches_played": 1,
+      "point_difference": -7,
+      "points_against": 84,
+      "points_for": 77,
+      "position": 16,
+      "team": "UCAM Murcia",
+      "wins": 0
+    },
+    {
+      "losses": 1,
+      "matches_played": 1,
+      "point_difference": -15,
+      "points_against": 107,
+      "points_for": 92,
+      "position": 17,
+      "team": "Kids&Us Manresa",
+      "wins": 0
+    },
+    {
+      "losses": 1,
+      "matches_played": 1,
+      "point_difference": -18,
+      "points_against": 119,
+      "points_for": 101,
+      "position": 18,
+      "team": "Leyma Coruña",
+      "wins": 0
+    }
+  ],
+  "season": "2026-27",
+  "source_url": "https://api2.acb.com/api/seasondata/Competition/standings?competitionId=1&editionId=91&roundId=6015"
+}
