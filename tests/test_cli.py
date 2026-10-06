@@ -12,19 +12,20 @@ from src.sync import PreparedSync, SyncStats, execute_sync
 MADRID = ZoneInfo("Europe/Madrid")
 
 
-def test_sync_gate_waits_until_24_hours() -> None:
+def test_sync_gate_blocks_second_run_same_local_day() -> None:
     now = datetime(2026, 8, 28, 6, 15, tzinfo=MADRID)
-    recent = (now - timedelta(hours=23, minutes=59)).isoformat()
-    allowed, next_at = should_sync({"last_successful_sync": recent}, now, force=False)
+    earlier_today = datetime(2026, 8, 28, 0, 5, tzinfo=MADRID).isoformat()
+    allowed, next_at = should_sync({"last_successful_sync": earlier_today}, now, force=False)
 
     assert not allowed
     assert next_at is not None
 
 
-def test_sync_gate_allows_after_24_hours() -> None:
-    now = datetime(2026, 8, 28, 6, 15, tzinfo=MADRID)
-    eligible = (now - timedelta(hours=24)).isoformat()
-    allowed, next_at = should_sync({"last_successful_sync": eligible}, now, force=False)
+def test_sync_gate_allows_next_local_day_even_under_24_hours() -> None:
+    # GitHub cron jitter: previous run at 13:28, next day at 13:16 (< 24h).
+    now = datetime(2026, 10, 6, 13, 16, tzinfo=MADRID)
+    previous_day = datetime(2026, 10, 5, 13, 28, tzinfo=MADRID).isoformat()
+    allowed, next_at = should_sync({"last_successful_sync": previous_day}, now, force=False)
 
     assert allowed
     assert next_at is None

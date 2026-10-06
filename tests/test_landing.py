@@ -112,7 +112,9 @@ def test_workflow_keeps_daily_run_and_publishes_public_directory() -> None:
     script = (ROOT / "scripts/sync_calendar.py").read_text(encoding="utf-8")
 
     assert 'cron: "15 4 * * *"' in workflow
-    assert "timedelta(hours=24)" in script
+    assert "last_local.date() >= now_local.date()" in script
+    assert 'github.event_name }}" = "schedule"' in workflow
+    assert "sync_calendar.py --force" in workflow
     assert "actions/upload-pages-artifact@v3" in workflow
     assert "path: public" in workflow
     assert "actions/deploy-pages@v4" in workflow

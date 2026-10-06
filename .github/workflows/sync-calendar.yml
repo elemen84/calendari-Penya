@@ -11,13 +11,15 @@ on:
       - "public/favicon.svg"
       - "public/assets/**"
   schedule:
-    # 06:15 Europe/Madrid during summer time. GitHub cron is UTC and does not
-    # follow DST; the daily run plus the 24-hour gate is intentional.
+    # ~06:15 Europe/Madrid in summer. GitHub cron is UTC, can drift by hours,
+    # and does not follow DST. Scheduled runs always force a sync so tip-off
+    # changes are picked up once every calendar day even when cron jitter
+    # would trip a rolling 24-hour gate.
     - cron: "15 4 * * *"
   workflow_dispatch:
     inputs:
       force:
-        description: "Ignore the 24-hour gate"
+        description: "Ignore the once-per-day gate"
         required: false
         default: false
         type: boolean
@@ -55,7 +57,7 @@ jobs:
           ACB_API_KEY: ${{ vars.ACB_API_KEY }}
           BCL_APIM_SUBSCRIPTION_KEY: ${{ vars.BCL_APIM_SUBSCRIPTION_KEY }}
         run: |
-          if [ "${{ inputs.force }}" = "true" ]; then
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.force }}" = "true" ]; then
             python scripts/sync_calendar.py --force
           else
             python scripts/sync_calendar.py

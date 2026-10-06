@@ -7,7 +7,7 @@ Incluye únicamente:
 - Liga Endesa / ACB.
 - Basketball Champions League / BCL.
 
-No usa servidor permanente, Railway, base de datos ni frontend. GitHub Actions ejecuta el script una vez al día; el script solo genera una nueva versión si han transcurrido al menos 24 horas desde la última sincronización correcta.
+No usa servidor permanente, Railway, base de datos ni frontend. GitHub Actions ejecuta el script una vez al día (con `--force` en el cron) para recoger cambios de horario; sin `--force`, el script permite como máximo una sincronización por día en Europe/Madrid.
 
 ## Fuentes oficiales
 
@@ -89,7 +89,7 @@ El script obtiene los datos reales al ejecutarse. Para consultar las fuentes y g
 python scripts/sync_calendar.py --dry-run --force
 ```
 
-`--force` ignora el límite de 24 horas. Sin `--force`, una ejecución posterior a la última correcta dentro de 24 horas termina limpiamente. `--dry-run` consulta las fuentes y genera el ICS sin guardar el estado ni snapshots.
+`--force` ignora el límite de una sincronización por día (Europe/Madrid). Sin `--force`, una segunda ejecución el mismo día local termina limpiamente. `--dry-run` consulta las fuentes y genera el ICS sin guardar el estado ni snapshots.
 
 También se puede establecer `PENYA_SEASON_START_YEAR=2026` para fijar explícitamente la temporada. Si no se establece, ACB selecciona la temporada actual publicada.
 
@@ -97,9 +97,9 @@ También se puede establecer `PENYA_SEASON_START_YEAR=2026` para fijar explícit
 
 La ejecución normal no necesita secrets. Las variables `PENYA_SEASON_START_YEAR`, `ACB_API_KEY` y `BCL_APIM_SUBSCRIPTION_KEY` son opcionales; los adapters tienen valores públicos por defecto.
 
-El workflow `.github/workflows/sync-calendar.yml` ejecuta el proceso diariamente a las `04:15 UTC`. Eso corresponde a las `06:15` en horario de verano de Madrid y a las `05:15` en horario de invierno. GitHub Actions cron funciona en UTC y no sigue automáticamente el cambio de hora; la ejecución diaria y el control interno de 24 horas evitan depender de una expresión cron incorrecta alrededor del cambio de mes.
+El workflow `.github/workflows/sync-calendar.yml` ejecuta el proceso diariamente a las `04:15 UTC`. Eso corresponde a las `06:15` en horario de verano de Madrid y a las `05:15` en horario de invierno. GitHub Actions cron funciona en UTC, puede retrasarse varias horas y no sigue el cambio de hora. Por eso las ejecuciones `schedule` lanzan siempre `sync_calendar.py --force`: así se regenera el ICS cada día aunque el cron llegue antes de cumplirse 24 horas exactas desde la sync anterior, y se recogen cambios de horario.
 
-El workflow tiene `workflow_dispatch`; marca `force` para forzar una sincronización manual. Tras una sincronización completa, solo se hace commit si han cambiado `data/sync-state.json`, snapshots o `public/penya.ics`.
+El workflow tiene `workflow_dispatch`; marca `force` para forzar una sincronización manual fuera del límite de un sync por día. Tras una sincronización completa, solo se hace commit si han cambiado `data/sync-state.json`, snapshots o `public/penya.ics`.
 
 Para que el workflow pueda hacer commit y publicar, la configuración del repositorio debe permitir que `GITHUB_TOKEN` escriba contenido (**Settings → Actions → General → Workflow permissions → Read and write permissions**).
 
@@ -131,7 +131,7 @@ La landing calcula automáticamente estas URLs a partir del dominio y la ruta do
 
 ## ICS
 
-Cada ejecución que pasa el control de 24 horas genera `public/penya.ics`, incluso en dry-run. Los UID tienen la forma `<source-key>@penya-calendar` y no cambian cuando cambia la hora del partido. GitHub Pages sirve ese archivo como feed público para las suscripciones.
+Cada ejecución que pasa el control de un sync por día genera `public/penya.ics`, incluso en dry-run. Los UID tienen la forma `<source-key>@penya-calendar` y no cambian cuando cambia la hora del partido. GitHub Pages sirve ese archivo como feed público para las suscripciones.
 
 ## Tests, lint y diagnóstico
 

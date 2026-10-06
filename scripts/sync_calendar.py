@@ -34,7 +34,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Read sources and generate ICS without persisting sync state or snapshots",
     )
-    parser.add_argument("--force", action="store_true", help="Ignore the 24-hour sync gate")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Ignore the once-per-day sync gate",
+    )
     return parser.parse_args()
 
 
@@ -51,6 +55,12 @@ def load_state() -> dict[str, object]:
 
 
 def should_sync(state: dict[str, object], now: datetime, force: bool) -> tuple[bool, str | None]:
+    """Allow at most one non-forced sync per Europe/Madrid calendar day.
+
+    GitHub Actions cron can drift by hours. A rolling 24-hour gate then skips the
+    next scheduled run when it starts slightly earlier than the previous one.
+    A calendar-day gate keeps one catch-up sync per local day for tip-off changes.
+    """
     if force:
         return True, None
     last = state.get("last_successful_sync")
@@ -62,9 +72,14 @@ def should_sync(state: dict[str, object], now: datetime, force: bool) -> tuple[b
         raise RuntimeError("last_successful_sync is not a valid ISO datetime") from exc
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=TZ)
-    elapsed = now - parsed.astimezone(TZ)
-    if elapsed < timedelta(hours=24):
-        next_at = parsed.astimezone(TZ) + timedelta(hours=24)
+    last_local = parsed.astimezone(TZ)
+    now_local = now.astimezone(TZ)
+    if last_local.date() >= now_local.date():
+        next_at = datetime.combine(
+            now_local.date() + timedelta(days=1),
+            datetime.min.time(),
+            tzinfo=TZ,
+        )
         return False, next_at.strftime("%d/%m/%Y %H:%M %Z")
     return True, None
 
