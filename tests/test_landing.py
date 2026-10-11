@@ -147,12 +147,32 @@ def test_published_ics_uses_catalan_event_labels() -> None:
     assert acb_events
     assert bcl_events
     assert all("CLASSIFICACIÓ" in event for event in acb_events)
-    assert all("Classificació encara no disponible" in event for event in acb_events)
+    assert all("Font: ACB" in event for event in acb_events)
+    assert all("Actualitzat:" in event for event in acb_events)
+    # Published feed may include live standings or the Catalan empty message.
+    # Both are valid; Spanish/English standings copy is not.
+    assert all(
+        (
+            "Classificació encara no disponible" in event
+            or (" PJ · " in event and " PF " in event and " PC " in event)
+        )
+        for event in acb_events
+    )
+    assert any(" PJ · " in event and " PF " in event and " PC " in event for event in acb_events)
     assert all(
         all(
             label not in event
-            for label in ("Clasificación", "Fuente", "Actualizado", "Classification", "Source")
+            for label in (
+                "Clasificación",
+                "Fuente",
+                "Actualizado",
+                "Classification",
+                "Source",
+                "Updated",
+                "CLASIFICACIÓN",
+            )
         )
         for event in acb_events
     )
     assert all("CLASSIFICACIÓ" not in event for event in bcl_events)
+    assert all("Font: ACB" not in event for event in bcl_events)

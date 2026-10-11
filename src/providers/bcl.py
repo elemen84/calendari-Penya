@@ -128,7 +128,10 @@ class BCLProvider:
             try:
                 source_id = str(int(item["gameId"]))
                 round_data = item["round"]
-                round_number = int(round_data["roundNumber"])
+                if not isinstance(round_data, dict):
+                    raise TypeError("round metadata must be an object")
+                # BCL roundNumber is a competition-phase index (RS=1 for every
+                # regular-season game), not a matchday. Do not publish it as jornada.
                 phase = str(round_data.get("roundName") or "").strip() or None
                 group = str(item.get("groupPairingCode") or "").strip() or None
                 status = _normalize_status(item)
@@ -143,7 +146,7 @@ class BCLProvider:
                 Game(
                     competition="BCL",
                     season=season_label(season_start_year),
-                    round=round_number,
+                    round=None,
                     phase=phase,
                     home_team=display_team_name(home),
                     away_team=display_team_name(away),

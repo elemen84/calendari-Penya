@@ -41,7 +41,9 @@ def test_bcl_new_phase_is_added_without_changing_existing_phase() -> None:
 
     assert set(by_id) == {"2001", "2002"}
     assert by_id["2001"].phase == "Regular Season"
+    assert by_id["2001"].round is None
     assert by_id["2002"].phase == "Round of 16"
+    assert by_id["2002"].round is None
 
 
 def test_new_phase_can_grow_total_without_expected_count_rules() -> None:
