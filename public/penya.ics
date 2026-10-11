@@ -35,10 +35,10 @@ BEGIN:VEVENT
 UID:bcl:2026-27:136307@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:✅ FINALITZAT · 🏀 Penya – Bnei Penlink Herzliya · BCL · Re
- gular Season · J1
-DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nJornada
- : 1\nGrup: H\n\n📍 Palau Municipal d'Esports de Badalona\n\nFont oficial
- : https://www.championsleague.basketball/en/games
+ gular Season
+DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nGrup: H
+ \n\n📍 Palau Municipal d'Esports de Badalona\n\nFont oficial: https://ww
+ w.championsleague.basketball/en/games
 STATUS:CONFIRMED
 LOCATION:Palau Municipal d'Esports de Badalona
 DTSTART;TZID=Europe/Madrid:20261006T203000
@@ -48,25 +48,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105399@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Kosner Baskonia – Penya · Liga Endesa J3
-DESCRIPTION:🏆 Liga Endesa\nJornada 3\n\n📊 CLASSIFICACIÓ\n1. Breogán
- \n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 PJ
-  · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2 
- G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 3\n\n📊 CLASSIFICACIÓ\n1. Real Mad
+ rid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   3
+  PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2 
+ G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P 
+ · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 255
+  · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 28
+ 8 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\n
+ 8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. S
+ an Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. V
+ alencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. Un
+ icaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   3
+  PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261011T170000
 DTEND;TZID=Europe/Madrid:20261011T190000
@@ -75,25 +75,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105384@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:⚠️ AJORNAT · 🏀 Penya – MoraBanc Andorra · Liga Endesa J2
-DESCRIPTION:🏆 Liga Endesa\nJornada 2\n\n📊 CLASSIFICACIÓ\n1. Breogán
- \n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 PJ
-  · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2 
- G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 2\n\n📊 CLASSIFICACIÓ\n1. Real Mad
+ rid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   3
+  PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2 
+ G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P 
+ · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 255
+  · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 28
+ 8 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\n
+ 8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. S
+ an Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. V
+ alencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. Un
+ icaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   3
+  PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:TENTATIVE
 DTSTART;TZID=Europe/Madrid:20261014T200000
 DTEND;TZID=Europe/Madrid:20261014T220000
@@ -102,25 +102,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105410@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Barça · Liga Endesa J4
-DESCRIPTION:🏆 Liga Endesa\nJornada 4\n\n📊 CLASSIFICACIÓ\n1. Breogán
- \n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 PJ
-  · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2 
- G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 4\n\n📊 CLASSIFICACIÓ\n1. Real Mad
+ rid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   3
+  PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2 
+ G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P 
+ · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 255
+  · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 28
+ 8 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\n
+ 8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. S
+ an Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. V
+ alencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. Un
+ icaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   3
+  PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261018T190000
 DTEND;TZID=Europe/Madrid:20261018T210000
@@ -128,10 +128,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:bcl:2026-27:136310@penya-calendar
 DTSTAMP:20000101T000000Z
-SUMMARY:🏀 Penya – Telekom Baskets Bonn · BCL · Regular Season · J1
-DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nJornada
- : 1\nGrup: H\n\n📍 Palau Municipal d'Esports de Badalona\n\nFont oficial
- : https://www.championsleague.basketball/en/games
+SUMMARY:🏀 Penya – Telekom Baskets Bonn · BCL · Regular Season
+DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nGrup: H
+ \n\n📍 Palau Municipal d'Esports de Badalona\n\nFont oficial: https://ww
+ w.championsleague.basketball/en/games
 STATUS:CONFIRMED
 LOCATION:Palau Municipal d'Esports de Badalona
 DTSTART;TZID=Europe/Madrid:20261021T200000
@@ -141,25 +141,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105412@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 FIATC Girona – Penya · Liga Endesa J5
-DESCRIPTION:🏆 Liga Endesa\nJornada 5\n\n📊 CLASSIFICACIÓ\n1. Breogán
- \n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 PJ
-  · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2 
- G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 5\n\n📊 CLASSIFICACIÓ\n1. Real Mad
+ rid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   3
+  PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2 
+ G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P 
+ · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 255
+  · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 28
+ 8 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\n
+ 8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. S
+ an Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. V
+ alencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. Un
+ icaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   3
+  PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261024T210000
 DTEND;TZID=Europe/Madrid:20261024T230000
@@ -168,25 +168,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105423@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Surne Bilbao · Liga Endesa J6
-DESCRIPTION:🏆 Liga Endesa\nJornada 6\n\n📊 CLASSIFICACIÓ\n1. Breogán
- \n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 PJ
-  · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2 
- G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 6\n\n📊 CLASSIFICACIÓ\n1. Real Mad
+ rid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   3
+  PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2 
+ G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P 
+ · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 255
+  · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 28
+ 8 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\n
+ 8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. S
+ an Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. V
+ alencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. Un
+ icaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   3
+  PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261101T120000
 DTEND;TZID=Europe/Madrid:20261101T140000
@@ -194,10 +194,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:bcl:2026-27:136312@penya-calendar
 DTSTAMP:20000101T000000Z
-SUMMARY:🏀 FC Porto – Penya · BCL · Regular Season · J1
-DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nJornada
- : 1\nGrup: H\n\n📍 Centro de Desportos e Congressos de Matosinhos\n\nFon
- t oficial: https://www.championsleague.basketball/en/games
+SUMMARY:🏀 FC Porto – Penya · BCL · Regular Season
+DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nGrup: H
+ \n\n📍 Centro de Desportos e Congressos de Matosinhos\n\nFont oficial: h
+ ttps://www.championsleague.basketball/en/games
 STATUS:CONFIRMED
 LOCATION:Centro de Desportos e Congressos de Matosinhos
 DTSTART;TZID=Europe/Madrid:20261103T203000
@@ -207,25 +207,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105434@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 La Laguna Tenerife – Penya · Liga Endesa J7
-DESCRIPTION:🏆 Liga Endesa\nJornada 7\n\n📊 CLASSIFICACIÓ\n1. Breogán
- \n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 PJ
-  · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2 
- G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 7\n\n📊 CLASSIFICACIÓ\n1. Real Mad
+ rid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   3
+  PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2 
+ G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P 
+ · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 255
+  · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 28
+ 8 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\n
+ 8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. S
+ an Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. V
+ alencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. Un
+ icaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   3
+  PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261108T130000
 DTEND;TZID=Europe/Madrid:20261108T150000
@@ -234,25 +234,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105440@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Casademont Zaragoza · Liga Endesa J8
-DESCRIPTION:🏆 Liga Endesa\nJornada 8\n\n📊 CLASSIFICACIÓ\n1. Breogán
- \n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 PJ
-  · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2 
- G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 8\n\n📊 CLASSIFICACIÓ\n1. Real Mad
+ rid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   3
+  PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2 
+ G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P 
+ · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 255
+  · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 28
+ 8 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\n
+ 8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. S
+ an Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. V
+ alencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. Un
+ icaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   3
+  PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261114T210000
 DTEND;TZID=Europe/Madrid:20261114T230000
@@ -260,10 +260,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:bcl:2026-27:136314@penya-calendar
 DTSTAMP:20000101T000000Z
-SUMMARY:🏀 Penya – FC Porto · BCL · Regular Season · J1
-DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nJornada
- : 1\nGrup: H\n\n📍 Palau Municipal d'Esports de Badalona\n\nFont oficial
- : https://www.championsleague.basketball/en/games
+SUMMARY:🏀 Penya – FC Porto · BCL · Regular Season
+DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nGrup: H
+ \n\n📍 Palau Municipal d'Esports de Badalona\n\nFont oficial: https://ww
+ w.championsleague.basketball/en/games
 STATUS:CONFIRMED
 LOCATION:Palau Municipal d'Esports de Badalona
 DTSTART;TZID=Europe/Madrid:20261117T203000
@@ -273,25 +273,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105455@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Real Madrid – Penya · Liga Endesa J9
-DESCRIPTION:🏆 Liga Endesa\nJornada 9\n\n📊 CLASSIFICACIÓ\n1. Breogán
- \n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 PJ
-  · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2 
- G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 9\n\n📊 CLASSIFICACIÓ\n1. Real Mad
+ rid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   3
+  PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2 
+ G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P 
+ · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 255
+  · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 28
+ 8 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\n
+ 8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. S
+ an Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. V
+ alencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. Un
+ icaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   3
+  PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261122T190000
 DTEND;TZID=Europe/Madrid:20261122T210000
@@ -300,25 +300,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105462@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Recoletas Salud San Pablo Burgos – Penya · Liga Endesa J10
-DESCRIPTION:🏆 Liga Endesa\nJornada 10\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 10\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261206T170000
 DTEND;TZID=Europe/Madrid:20261206T190000
@@ -327,25 +327,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105468@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Valencia Basket · Liga Endesa J11
-DESCRIPTION:🏆 Liga Endesa\nJornada 11\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 11\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261208T190000
 DTEND;TZID=Europe/Madrid:20261208T210000
@@ -354,25 +354,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105476@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Monbus Obradoiro · Liga Endesa J12
-DESCRIPTION:🏆 Liga Endesa\nJornada 12\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 12\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261213T120000
 DTEND;TZID=Europe/Madrid:20261213T140000
@@ -380,10 +380,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:bcl:2026-27:136315@penya-calendar
 DTSTAMP:20000101T000000Z
-SUMMARY:🏀 Telekom Baskets Bonn – Penya · BCL · Regular Season · J1
-DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nJornada
- : 1\nGrup: H\n\n📍 Telekom Dome\n\nFont oficial: https://www.championsle
- ague.basketball/en/games
+SUMMARY:🏀 Telekom Baskets Bonn – Penya · BCL · Regular Season
+DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nGrup: H
+ \n\n📍 Telekom Dome\n\nFont oficial: https://www.championsleague.basketb
+ all/en/games
 STATUS:CONFIRMED
 LOCATION:Telekom Dome
 DTSTART;TZID=Europe/Madrid:20261216T200000
@@ -393,25 +393,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105484@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Unicaja – Penya · Liga Endesa J13
-DESCRIPTION:🏆 Liga Endesa\nJornada 13\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 13\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261219T193000
 DTEND;TZID=Europe/Madrid:20261219T213000
@@ -419,10 +419,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:bcl:2026-27:136318@penya-calendar
 DTSTAMP:20000101T000000Z
-SUMMARY:🏀 Bnei Penlink Herzliya – Penya · BCL · Regular Season · J1
-DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nJornada
- : 1\nGrup: H\n\n📍 Arena SamElyon\n\nFont oficial: https://www.champions
- league.basketball/en/games
+SUMMARY:🏀 Bnei Penlink Herzliya – Penya · BCL · Regular Season
+DESCRIPTION:🏆 Basketball Champions League\nFase: Regular Season\nGrup: H
+ \n\n📍 Arena SamElyon\n\nFont oficial: https://www.championsleague.baske
+ tball/en/games
 STATUS:CONFIRMED
 LOCATION:Arena SamElyon
 DTSTART;TZID=Europe/Madrid:20261223T183000
@@ -432,25 +432,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105492@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Kids&Us Manresa · Liga Endesa J14
-DESCRIPTION:🏆 Liga Endesa\nJornada 14\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 14\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261227T120000
 DTEND;TZID=Europe/Madrid:20261227T140000
@@ -459,25 +459,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105504@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 UCAM Murcia – Penya · Liga Endesa J15
-DESCRIPTION:🏆 Liga Endesa\nJornada 15\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 15\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20261230T210000
 DTEND;TZID=Europe/Madrid:20261230T230000
@@ -486,25 +486,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105516@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Leyma Coruña · Liga Endesa J16
-DESCRIPTION:🏆 Liga Endesa\nJornada 16\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 16\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270103T170000
 DTEND;TZID=Europe/Madrid:20270103T190000
@@ -513,25 +513,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105519@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – iLERNA Lleida · Liga Endesa J17
-DESCRIPTION:🏆 Liga Endesa\nJornada 17\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 17\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270109T193000
 DTEND;TZID=Europe/Madrid:20270109T213000
@@ -540,25 +540,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105531@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Surne Bilbao – Penya · Liga Endesa J18
-DESCRIPTION:🏆 Liga Endesa\nJornada 18\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 18\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270117T120000
 DTEND;TZID=Europe/Madrid:20270117T140000
@@ -567,25 +567,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105545@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Barça – Penya · Liga Endesa J19
-DESCRIPTION:🏆 Liga Endesa\nJornada 19\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 19\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270124T190000
 DTEND;TZID=Europe/Madrid:20270124T210000
@@ -594,25 +594,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105550@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – FIATC Girona · Liga Endesa J20
-DESCRIPTION:🏆 Liga Endesa\nJornada 20\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 20\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270131T120000
 DTEND;TZID=Europe/Madrid:20270131T140000
@@ -621,25 +621,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105562@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Valencia Basket – Penya · Liga Endesa J21
-DESCRIPTION:🏆 Liga Endesa\nJornada 21\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 21\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270207T180000
 DTEND;TZID=Europe/Madrid:20270207T200000
@@ -648,25 +648,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105567@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Río Breogán · Liga Endesa J22
-DESCRIPTION:🏆 Liga Endesa\nJornada 22\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 22\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270214T120000
 DTEND;TZID=Europe/Madrid:20270214T140000
@@ -675,25 +675,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105579@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Unicaja · Liga Endesa J23
-DESCRIPTION:🏆 Liga Endesa\nJornada 23\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 23\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270307T170000
 DTEND;TZID=Europe/Madrid:20270307T190000
@@ -702,25 +702,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105587@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Casademont Zaragoza – Penya · Liga Endesa J24
-DESCRIPTION:🏆 Liga Endesa\nJornada 24\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 24\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270314T123000
 DTEND;TZID=Europe/Madrid:20270314T143000
@@ -729,25 +729,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105592@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Monbus Obradoiro – Penya · Liga Endesa J25
-DESCRIPTION:🏆 Liga Endesa\nJornada 25\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 25\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270320T193000
 DTEND;TZID=Europe/Madrid:20270320T213000
@@ -756,25 +756,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105600@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Recoletas Salud San Pablo Burgos · Liga Endesa J26
-DESCRIPTION:🏆 Liga Endesa\nJornada 26\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 26\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270327T180000
 DTEND;TZID=Europe/Madrid:20270327T200000
@@ -783,25 +783,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105615@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Real Madrid · Liga Endesa J27
-DESCRIPTION:🏆 Liga Endesa\nJornada 27\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 27\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270404T170000
 DTEND;TZID=Europe/Madrid:20270404T190000
@@ -810,25 +810,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105622@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 iLERNA Lleida – Penya · Liga Endesa J28
-DESCRIPTION:🏆 Liga Endesa\nJornada 28\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 28\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270411T120000
 DTEND;TZID=Europe/Madrid:20270411T140000
@@ -837,25 +837,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105633@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – La Laguna Tenerife · Liga Endesa J29
-DESCRIPTION:🏆 Liga Endesa\nJornada 29\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 29\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270418T170000
 DTEND;TZID=Europe/Madrid:20270418T190000
@@ -864,25 +864,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105639@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 MoraBanc Andorra – Penya · Liga Endesa J30
-DESCRIPTION:🏆 Liga Endesa\nJornada 30\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 30\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270425T120000
 DTEND;TZID=Europe/Madrid:20270425T140000
@@ -891,25 +891,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105651@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – Kosner Baskonia · Liga Endesa J31
-DESCRIPTION:🏆 Liga Endesa\nJornada 31\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 31\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270502T170000
 DTEND;TZID=Europe/Madrid:20270502T190000
@@ -918,25 +918,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105658@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Leyma Coruña – Penya · Liga Endesa J32
-DESCRIPTION:🏆 Liga Endesa\nJornada 32\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 32\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270509T120000
 DTEND;TZID=Europe/Madrid:20270509T140000
@@ -945,25 +945,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105669@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Penya – UCAM Murcia · Liga Endesa J33
-DESCRIPTION:🏆 Liga Endesa\nJornada 33\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 33\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;TZID=Europe/Madrid:20270516T170000
 DTEND;TZID=Europe/Madrid:20270516T190000
@@ -972,25 +972,25 @@ BEGIN:VEVENT
 UID:liga-endesa:2026-27:105677@penya-calendar
 DTSTAMP:20000101T000000Z
 SUMMARY:🏀 Kids&Us Manresa – Penya · Liga Endesa J34
-DESCRIPTION:🏆 Liga Endesa\nJornada 34\n\n📊 CLASSIFICACIÓ\n1. Breogá
- n\n   3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n2. Baskonia\n   2 P
- J · 2 G · 0 P · PF 216 · PC 175 · +41\n\n3. Real Madrid\n   2 PJ · 2
-  G · 0 P · PF 203 · PC 194 · +9\n\n4. Zaragoza\n   3 PJ · 2 G · 1 P 
- · PF 255 · PC 248 · +7\n\n5. Barça\n   2 PJ · 1 G · 1 P · PF 213 ·
-  PC 201 · +12\n\n6. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 
- 196 · +12\n\n7. San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 1
- 79 · +12\n\n8. Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187
-  · +10\n\n9. Tenerife\n   2 PJ · 1 G · 1 P · PF 160 · PC 156 · +4\n\
- n10. UCAM Murcia\n   2 PJ · 1 G · 1 P · PF 177 · PC 178 · -1\n\n11. O
- bradoiro\n   2 PJ · 1 G · 1 P · PF 197 · PC 199 · -2\n\n12. Lleida\n 
-   2 PJ · 1 G · 1 P · PF 186 · PC 194 · -8\n\n13. Unicaja\n   3 PJ · 
- 1 G · 2 P · PF 254 · PC 253 · +1\n\n14. Coruña\n   3 PJ · 1 G · 2 P
-  · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF 254
-  · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · PF 10
- 4 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · PC 18
- 2 · -13\n\n18. Manresa\n   2 PJ · 0 G · 2 P · PF 187 · PC 208 · -21\
- n\nFont: ACB\nActualitzat: 11/10/2026 12:49\nFont oficial: https://www.acb
- .com/es/liga/calendario
+DESCRIPTION:🏆 Liga Endesa\nJornada 34\n\n📊 CLASSIFICACIÓ\n1. Real Ma
+ drid\n   3 PJ · 3 G · 0 P · PF 323 · PC 277 · +46\n\n2. Breogán\n   
+ 3 PJ · 3 G · 0 P · PF 326 · PC 291 · +35\n\n3. Baskonia\n   2 PJ · 2
+  G · 0 P · PF 216 · PC 175 · +41\n\n4. Tenerife\n   3 PJ · 2 G · 1 P
+  · PF 250 · PC 233 · +17\n\n5. Zaragoza\n   3 PJ · 2 G · 1 P · PF 25
+ 5 · PC 248 · +7\n\n6. Obradoiro\n   3 PJ · 2 G · 1 P · PF 288 · PC 2
+ 88 · +0\n\n7. Barça\n   2 PJ · 1 G · 1 P · PF 213 · PC 201 · +12\n\
+ n8. Bilbao Basket\n   2 PJ · 1 G · 1 P · PF 208 · PC 196 · +12\n\n9. 
+ San Pablo Burgos\n   2 PJ · 1 G · 1 P · PF 191 · PC 179 · +12\n\n10. 
+ Valencia Basket\n   2 PJ · 1 G · 1 P · PF 197 · PC 187 · +10\n\n11. U
+ nicaja\n   3 PJ · 1 G · 2 P · PF 254 · PC 253 · +1\n\n12. Lleida\n   
+ 3 PJ · 1 G · 2 P · PF 275 · PC 285 · -10\n\n13. UCAM Murcia\n   3 PJ 
+ · 1 G · 2 P · PF 254 · PC 268 · -14\n\n14. Coruña\n   3 PJ · 1 G ·
+  2 P · PF 276 · PC 312 · -36\n\n15. Girona\n   3 PJ · 1 G · 2 P · PF
+  254 · PC 310 · -56\n\n16. Joventut Badalona\n   1 PJ · 0 G · 1 P · P
+ F 104 · PC 110 · -6\n\n17. Andorra\n   2 PJ · 0 G · 2 P · PF 169 · P
+ C 182 · -13\n\n18. Manresa\n   3 PJ · 0 G · 3 P · PF 270 · PC 328 · 
+ -58\n\nFont: ACB\nActualitzat: 11/10/2026 18:15\nFont oficial: https://www
+ .acb.com/es/liga/calendario
 STATUS:CONFIRMED
 DTSTART;VALUE=DATE:20270521
 DTEND;VALUE=DATE:20270522
