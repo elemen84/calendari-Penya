@@ -8,6 +8,11 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 
+# schema 1: first SEQUENCE-aware publish used SEQUENCE 0 for every UID.
+# Google treats a missing SEQUENCE as 0, so those updates were ignored.
+# schema 2: one-time +1 bump so existing subscriptions see a higher SEQUENCE.
+CURRENT_SCHEMA_VERSION = 2
+
 
 class RevisionStoreError(RuntimeError):
     pass
@@ -54,10 +59,16 @@ class EventRevisionStore:
     def __init__(self, path: Path) -> None:
         self.path = path
         self._entries: dict[str, EventRevision] = {}
+        self._schema_version = CURRENT_SCHEMA_VERSION
+
+    @property
+    def schema_version(self) -> int:
+        return self._schema_version
 
     def load(self) -> None:
         if not self.path.exists():
             self._entries = {}
+            self._schema_version = CURRENT_SCHEMA_VERSION
             return
         try:
             payload = json.loads(self.path.read_text(encoding="utf-8"))
@@ -84,10 +95,21 @@ class EventRevisionStore:
             except (KeyError, TypeError, ValueError) as exc:
                 raise RevisionStoreError(f"Invalid ICS revision entry: {uid}") from exc
         self._entries = entries
+        # Missing schema_version means the SEQUENCE:0 publish that Google may ignore.
+        if "schema_version" in payload:
+            try:
+                self._schema_version = int(payload["schema_version"])
+            except (TypeError, ValueError) as exc:
+                raise RevisionStoreError(
+                    f"Invalid ICS revision schema_version: {self.path}"
+                ) from exc
+        else:
+            self._schema_version = 1
 
     def save(self) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)
         document = {
+            "schema_version": self._schema_version,
             "events": {
                 uid: {
                     "sequence": revision.sequence,
@@ -95,7 +117,7 @@ class EventRevisionStore:
                     "fingerprint": revision.fingerprint,
                 }
                 for uid, revision in sorted(self._entries.items())
-            }
+            },
         }
         fd, temporary_name = tempfile.mkstemp(
             prefix=".ics-revisions-",
@@ -110,6 +132,28 @@ class EventRevisionStore:
         finally:
             if os.path.exists(temporary_name):
                 os.unlink(temporary_name)
+
+    def ensure_google_subscription_compat(self, *, now: datetime) -> bool:
+        """Raise SEQUENCE once so legacy Google URL subscriptions accept updates.
+
+        Pre-revision feeds omitted SEQUENCE (clients treat that as 0). Publishing
+        SEQUENCE:0 with corrected DTSTART/SUMMARY/DESCRIPTION is not enough for
+        Google to replace those stored events. A single +1 bump is required.
+        """
+
+        if self._schema_version >= CURRENT_SCHEMA_VERSION:
+            return False
+        now_utc = _as_utc(now)
+        self._entries = {
+            uid: EventRevision(
+                sequence=revision.sequence + 1,
+                last_modified=now_utc,
+                fingerprint=revision.fingerprint,
+            )
+            for uid, revision in self._entries.items()
+        }
+        self._schema_version = CURRENT_SCHEMA_VERSION
+        return True
 
     def resolve(self, uid: str, fingerprint: str, *, now: datetime) -> ResolvedRevision:
         now_utc = _as_utc(now)

@@ -275,6 +275,88 @@ def test_ics_rfc5545_timed_event_shape(tmp_path: Path) -> None:
     assert "\\n" in feed
 
 
+def test_legacy_sequence_zero_store_bumps_once_for_google_subscribers(
+    tmp_path: Path,
+) -> None:
+    """Simulate the SEQUENCE:0 publish that Google may still hold for these UIDs."""
+
+    import json
+
+    game = make_game(hour=20)
+    key = source_key(game)
+    uid = f"{key}@penya-calendar"
+    path = tmp_path / "ics-revisions.json"
+    descriptions = {key: "🏆 Liga Endesa\nClassificació encara no disponible"}
+
+    # First write creates a current-schema store. Downgrade it to schema 1 / SEQUENCE 0
+    # to mirror production right after the first Google-compat deploy.
+    bootstrap = EventRevisionStore(path)
+    write_ics(
+        tmp_path / "bootstrap.ics",
+        [game],
+        descriptions,
+        revision_store=bootstrap,
+        now=datetime(2026, 10, 19, 10, 0, tzinfo=MADRID),
+    )
+    legacy = json.loads(path.read_text(encoding="utf-8"))
+    legacy.pop("schema_version", None)
+    for entry in legacy["events"].values():
+        entry["sequence"] = 0
+        entry["last_modified"] = "2026-10-19T08:00:00+00:00"
+    path.write_text(json.dumps(legacy, indent=2) + "\n", encoding="utf-8")
+
+    store = EventRevisionStore(path)
+    store.load()
+    assert store.schema_version == 1
+
+    bumped = render_ics(
+        [game],
+        descriptions,
+        revision_store=store,
+        now=datetime(2026, 10, 19, 12, 0, tzinfo=MADRID),
+    )
+    store.save()
+    block = _event_block(bumped, uid)
+    assert _field(block, "UID") == uid
+    assert _field(block, "SEQUENCE") == "1"
+    assert _field(block, "DTSTAMP") == "20261019T100000Z"
+    assert _field(block, "LAST-MODIFIED") == "20261019T100000Z"
+    assert _field(block, "DTSTART") == "20261214T190000Z"
+
+    saved = json.loads(path.read_text(encoding="utf-8"))
+    assert saved["schema_version"] == 2
+    assert saved["events"][uid]["sequence"] == 1
+
+    # Later sync with identical content must not bump again.
+    store2 = EventRevisionStore(path)
+    store2.load()
+    stable = render_ics(
+        [game],
+        descriptions,
+        revision_store=store2,
+        now=datetime(2026, 10, 20, 9, 0, tzinfo=MADRID),
+    )
+    stable_block = _event_block(stable, uid)
+    assert _field(stable_block, "SEQUENCE") == "1"
+    assert _field(stable_block, "DTSTAMP") == "20261019T100000Z"
+    assert _field(stable_block, "LAST-MODIFIED") == "20261019T100000Z"
+
+    # A real description/date change after the compat bump must go 1 → 2.
+    store3 = EventRevisionStore(path)
+    store3.load()
+    updated = render_ics(
+        [make_game(hour=21)],
+        {key: "🏆 Liga Endesa\n1. Barça\n   1 PJ · 1 G · 0 P"},
+        revision_store=store3,
+        now=datetime(2026, 10, 21, 9, 0, tzinfo=MADRID),
+    )
+    updated_block = _event_block(updated, uid)
+    assert _field(updated_block, "UID") == uid
+    assert _field(updated_block, "SEQUENCE") == "2"
+    assert _field(updated_block, "DTSTART") == "20261214T200000Z"
+    assert "1. Barça" in updated_block
+
+
 def test_acb_event_content_uses_catalan_labels_and_keeps_official_values() -> None:
     game = make_game()
     standings = StandingsSnapshot(

@@ -66,6 +66,10 @@ def render_ics(
     generated_at = now or datetime.now(UTC)
     if generated_at.tzinfo is None:
         generated_at = generated_at.replace(tzinfo=UTC)
+    if revision_store is not None:
+        # One-time SEQUENCE bump for Google URL subscriptions that still hold
+        # the pre-revision (implicit SEQUENCE 0) copies of these UIDs.
+        revision_store.ensure_google_subscription_compat(now=generated_at)
     lines = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
