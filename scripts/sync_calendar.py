@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from src.calendar.revisions import EventRevisionStore, RevisionStoreError
 from src.http_client import OfficialHttpClient
 from src.providers.acb import ACB_PUBLIC_API_KEY, ACBProvider, ProviderError
 from src.providers.bcl import BCL_PUBLIC_SUBSCRIPTION_KEY, BCLProvider, BCLProviderError
@@ -24,6 +25,7 @@ from src.sync import execute_sync, prepare_sync
 LOGGER = logging.getLogger("penya-calendar")
 TZ = ZoneInfo("Europe/Madrid")
 STATE_PATH = ROOT / "data/sync-state.json"
+REVISIONS_PATH = ROOT / "data/ics-revisions.json"
 ICS_PATH = ROOT / "public/penya.ics"
 
 
@@ -141,9 +143,14 @@ def main() -> int:
             now=now,
             dry_run=args.dry_run,
         )
+        revision_store = EventRevisionStore(REVISIONS_PATH)
+        revision_store.load()
         stats = execute_sync(
             prepared,
             ics_path=ICS_PATH,
+            revision_store=revision_store,
+            now=now,
+            persist_revisions=not args.dry_run,
         )
         if not args.dry_run:
             state["last_successful_sync"] = now.isoformat()
@@ -153,7 +160,14 @@ def main() -> int:
             dry_run=args.dry_run,
         )
         return 0
-    except (ProviderError, BCLProviderError, SnapshotError, RuntimeError, ValueError) as exc:
+    except (
+        ProviderError,
+        BCLProviderError,
+        SnapshotError,
+        RevisionStoreError,
+        RuntimeError,
+        ValueError,
+    ) as exc:
         LOGGER.error("Synchronization failed safely: %s", exc)
         print("\nPENYA CALENDAR SYNC\n\nResult: FAIL", file=sys.stderr)
         return 1

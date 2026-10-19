@@ -118,7 +118,10 @@ def test_workflow_keeps_daily_run_and_publishes_public_directory() -> None:
     assert "actions/upload-pages-artifact@v3" in workflow
     assert "path: public" in workflow
     assert "actions/deploy-pages@v4" in workflow
-    assert "git add data/sync-state.json data/standings public/penya.ics" in workflow
+    assert (
+        "git add data/sync-state.json data/ics-revisions.json data/standings public/penya.ics"
+        in workflow
+    )
     assert "GOOGLE_" not in workflow
     assert "secrets." not in workflow
     assert "google" not in script.casefold()

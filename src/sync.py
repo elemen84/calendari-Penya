@@ -6,6 +6,7 @@ from pathlib import Path
 
 from src.calendar.formatting import description_for_game
 from src.calendar.ics import write_ics
+from src.calendar.revisions import EventRevisionStore
 from src.models import Game
 from src.normalize import source_key
 from src.providers.acb import ACBData, ACBProvider
@@ -104,6 +105,16 @@ def execute_sync(
     prepared: PreparedSync,
     *,
     ics_path: Path,
+    revision_store: EventRevisionStore | None = None,
+    now: datetime | None = None,
+    persist_revisions: bool = True,
 ) -> SyncStats:
-    write_ics(ics_path, prepared.games, prepared.descriptions)
+    write_ics(
+        ics_path,
+        prepared.games,
+        prepared.descriptions,
+        revision_store=revision_store,
+        now=now,
+        persist_revisions=persist_revisions,
+    )
     return prepared.stats
