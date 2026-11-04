@@ -11,9 +11,9 @@
       "sequence": 2
     },
     "bcl:2026-27:136312@penya-calendar": {
-      "fingerprint": "d90dc8e7fae25027adebdb0bb1a081523b786ffa760a249467f0639f45738265",
-      "last_modified": "2026-10-19T05:19:52.442519+00:00",
-      "sequence": 1
+      "fingerprint": "d38b04de118436f8f647e01105f69e46c52d35dbe5a1a04fba06804060c81b30",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 2
     },
     "bcl:2026-27:136314@penya-calendar": {
       "fingerprint": "3ac9b7b3bd9b7e795fcb5e3e0ab6729bfb74370ffa53d78fd30068f2f9f2127b",
@@ -61,144 +61,144 @@
       "sequence": 17
     },
     "liga-endesa:2026-27:105434@penya-calendar": {
-      "fingerprint": "7ffccb4df21cf62792a10b17932494a23e7723c2ea9537bc880479891414bfe5",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "badd324486958583f2ba7ba372e385c099b67e91dc0a82955e0d86db74529cd1",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105440@penya-calendar": {
-      "fingerprint": "c0fdb78c00576a5369ab01c1e336a790372cd53f015a9ff1837608fb8a751516",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "4e6127cd992dff18baf01d18494390b8a160df1391b05699b7244189270dec0d",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105455@penya-calendar": {
-      "fingerprint": "865f01ff771ba2cea848af2877d83c95919f1814fd5f7ee55b8f2fea4cb8560f",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "157a60eb557e830055d38e1a5b58fdbd5b4d346690da987d3a6cc0b96303dc44",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105462@penya-calendar": {
-      "fingerprint": "8d47aed1c085da5f25c9661d524dd08e786f05a5f27c17c6c9ca04fa214e4a6a",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "e2fc4b7ef34143606662e1c6310b03a6ac2e52417ed61168cdc98dd7e8d58ce3",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105468@penya-calendar": {
-      "fingerprint": "07162261e142e87bba58e6527f4a9443d3d38a2c6df22e95ce242f93c4bf86c6",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "36ef029177926664b934c417a64ee96972c0bee0b4b0e0ee056f8931c76ee591",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105476@penya-calendar": {
-      "fingerprint": "b4045c3de71ab0e011dec71ea29208d63792d66c4d78b26e7152999691f1f72a",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "7903d634cee0b23604ecb80b81ae0423424dda7a15a501b84fa26c552590fb47",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105484@penya-calendar": {
-      "fingerprint": "426df1df827c86d6889e34aaa866d8dcf516a1291a78e404a00cd378f8f86e17",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "ee6f497aba2094759be92bbb09eb309b9bc65590339e735366e04b3be02d5ece",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105492@penya-calendar": {
-      "fingerprint": "9fa770e1a3f834bea8adfaa5b91ec499c8a6c85338b1a2a2ad8b791c5efe3952",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "243c90a3b312a4518ab358f6e25063c5b0db021db913d753c983e212d19177e7",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105504@penya-calendar": {
-      "fingerprint": "384809e2e0c643d3c538d8edbe40119eeea324eaa82aa3e24fbaf76322648b4a",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "7229621b1c86b7e914c08475563d87d67213de451aceacb625e24eb360f7f107",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105516@penya-calendar": {
-      "fingerprint": "3916f0f303a7d8cd6e7f0e8e9a819373bd36d025a93883f64d2bb90ddcd3178a",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "41cc38a9acdf76b488f4482c3c422267db536b0e7f3d10283808f655d5b98e55",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105519@penya-calendar": {
-      "fingerprint": "2a65f13e43c2df0e6ab1165018035b6fdbe02beabecac879e088083b95eb4641",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "f029390cb7cc6f206eb5dc3ca234e386283ad6fe621f071f670c4562630b52f2",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105531@penya-calendar": {
-      "fingerprint": "326c4f500581b32abe2ed0f56497953b39f843dd7b01a847e2f5cccf6b062f33",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "d5a2345fab72ec7826dc6e558c7d74e3d31fac54a15f93c4df6fd9e0b4219ef7",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105545@penya-calendar": {
-      "fingerprint": "755ddbe2203812a172c2ec77e56b16863e59b2a6d3f3974cc131222937c29bcd",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "a8751e5b8ffbd204e8f9aecb5566ddb367f28764cadd71c63d3dcc2af779dbf4",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105550@penya-calendar": {
-      "fingerprint": "8508836e3ea6268829dc6348195ea9726c367964e59f21777f538c1e09f8b566",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "b95eeee52986e29bfd43c071737e3e87b0eeaf5793e9c2af96c5ed49d232a791",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105562@penya-calendar": {
-      "fingerprint": "6a6aa4b4895661f44137a22ff184e75045c880860d917f4b6c02bfdf414c2b1a",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "bf5a4f4bce9a9b3b41ce581727f57005726b654f8d5682ccc7c72a6d49cf5000",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105567@penya-calendar": {
-      "fingerprint": "c35a64acada5e3c93c3b1b3de293e2a84b2b08cd73dc92ddc8d2544cccfe8a89",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "fbdfe8ff96d9c0eed6d02b28143ef9038eebecfe3191d5b1de440c182b354e82",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105579@penya-calendar": {
-      "fingerprint": "af120b8b799961595bc1d86b86a6966117deea6644b987d08d5f619ab999bf3c",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "fdb37ada80097dfac5c106dc70834c06e1ea94f157eaf8bb8f781644a2d4ba18",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105587@penya-calendar": {
-      "fingerprint": "35fb3c72c957c1a63a5ee332c2829f3e386df941ad91b396730fad391c1545f4",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "d4ef3bc9ff67edf5113b35b72fef75644a35f2c2ae4fd9c0fccd9f5dfec2d597",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105592@penya-calendar": {
-      "fingerprint": "cd8138928d74d9d0a950099fb51cdd4a7def199473c08a03083a153a55a79d8b",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "0b009c66149b3063bf17c672914192b4cfd0b88169f6b959ebd2e6e1b6a1eed7",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105600@penya-calendar": {
-      "fingerprint": "ee96f85b2ddc8e9d628119c3eeb2f8407091f136ab03200891da7e04cdd746f6",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "027e90d9a635d6cc24d045386e68aafd54d0650fd1ef7d6d4105f3942ecb53da",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105615@penya-calendar": {
-      "fingerprint": "e3611b6bfd1e618d6efa5f283bfd20f1fadefbb2f8cae5b8234a20d5ac5a8659",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "f8bc8c5f83c2a30675d65630170239e9cea1e04658f1bf2f9929ff9b7f48a8e5",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105622@penya-calendar": {
-      "fingerprint": "0b4cc31236bd4b8be44fc4789da4d3f8bed53115782847528e8233545d02f5a0",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "8381714acd21e74f1746c6bbba8b5b495fe1b9c098fc8abe93ebb6a600bef2d4",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105633@penya-calendar": {
-      "fingerprint": "d43512ccaf6d53b490caae11ba904369e0e022d75be3b1d2c9a2d0c19e32482e",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "a8b6f7bc4a24b23489dabfec7f6b6aac5bb7f6766d8930c4c84354fbf47d3e8f",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105639@penya-calendar": {
-      "fingerprint": "6b38d85adaa84fa9eb6f56f1782b8354e491552d717c06419346950511d4fd16",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "203950b591d461020c6d246be33b7e9f940c37e08361682a3c50b050633a0e57",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105651@penya-calendar": {
-      "fingerprint": "36cae6f26d2ab7ae3b0fe3051006acb85d4d29c4c3d4679821a362191c0295fd",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "f7dbdb5cf672a69d7c17e3ec3ffd69dde54a11544c04acf704f76eefed653138",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105658@penya-calendar": {
-      "fingerprint": "008b7d6b44c58eb7405598b814c49ecd0450b16db9721e4c5d265dabbe14302f",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "3875eaa8ff431c9a010aa17a5b0562b0a6fd4633b2ffafe951ea6f0c117e6570",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105669@penya-calendar": {
-      "fingerprint": "0497b9edcfcbcc8690a2e1af3e4a2e6b61e194e0b6258a5cc81fb925caea92cb",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "dd49b6590b4eedb875166fb257df5fc9049e0d98252b10119c0ac29d8db0ef5a",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     },
     "liga-endesa:2026-27:105677@penya-calendar": {
-      "fingerprint": "ed6b79b2417426d9d8f54f07d1aa947918ac038a8009dddd262f4216ffa854af",
-      "last_modified": "2026-11-03T11:55:08.318882+00:00",
-      "sequence": 18
+      "fingerprint": "eab6e526c7af964ae32077e23f653a6f291b49f9ff773d39c567dbde0415bf4c",
+      "last_modified": "2026-11-04T12:07:27.202001+00:00",
+      "sequence": 19
     }
   },
   "schema_version": 2
